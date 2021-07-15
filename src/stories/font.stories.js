@@ -6,7 +6,7 @@ import '../components/font';
 
 storiesOf('Fonts', module)
   .addDecorator(story => (
-    <MainContent>{story()}</MainContent>
+    <MainContent style={{ justifyContent: 'center' }}>{story()}</MainContent>
   ))
   .add('Inter Regular', () => renderFont('Inter Regular'))
   .add('Inter SemiBold', () => renderFont('Inter SemiBold'))

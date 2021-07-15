@@ -1,6 +1,5 @@
 import React from 'react';
 import { Text as RNText, StyleSheet } from 'react-native';
-import PropTypes from 'prop-types';
 import {font} from './style';
 import './font';
 //
@@ -20,7 +19,7 @@ const baseStyles = StyleSheet.create({
       {children}
     </RNText>
   );
-  
+
   //
   // H1 Text
   //
