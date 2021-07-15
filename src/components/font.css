@@ -12,19 +12,19 @@ body {
   
   @font-face {
     font-family: 'Inter Regular';
-    src: url('../../assets/font/Inter-Regular.ttf') format('truetype');
+    src: url('../assets/font/Inter-Regular.ttf') format('truetype');
     font-style: normal;
     font-weight: 400;
   }
   @font-face {
     font-family: 'Inter SemiBold';
-    src: url('../../assets/font/Inter-SemiBold.ttf') format('truetype');
+    src: url('../assets/font/Inter-SemiBold.ttf') format('truetype');
     font-style: normal;
     font-weight: 600;
   }
   @font-face {
     font-family: 'Inter Medium';
-    src: url('../../assets/font/Inter-Medium.ttf') format('truetype');
+    src: url('../assets/font/Inter-Medium.ttf') format('truetype');
     font-style: normal;
     font-weight: 500;
   }

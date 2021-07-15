@@ -2,7 +2,7 @@ import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
 import {View,Text} from 'react-native'
-import {Button} from './button';
+import {Button} from '../components/button';
 
 storiesOf('Button', module)
   .addDecorator(story => (

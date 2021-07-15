@@ -1,7 +1,7 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 import {View , Text} from 'react-native';
-import './font';
+import '../components/font';
 
 storiesOf('Fonts', module)
   .addDecorator(story => (
