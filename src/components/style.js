@@ -1,0 +1,23 @@
+export const color = {
+    orange : '#F7931A'
+  };
+  
+  export const font = {
+    sizeXS: 10,
+    sizeS: 12,
+    sizeSub: 14,
+    sizeBase: 16,
+    sizeM: 18,
+    sizeL: 20,
+    sizeXXL: 40,
+    sizeXXXL: 80,
+    lineHeightXS: 14,
+    lineHeightS: 16,
+    lineHeightSub: 18,
+    lineHeightBase: 22,
+    lineHeightM: 22,
+    lineHeightL: 24,
+    lineHeightXXL: 60,
+    lineHeightXXXL: 100,
+  };
+    

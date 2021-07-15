@@ -1,14 +1,12 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import {View , Text} from 'react-native';
+import MainContent from '../components/main-content';
+import {Text} from 'react-native';
 import '../components/font';
 
 storiesOf('Fonts', module)
   .addDecorator(story => (
-    <View style={{alignItems : 'center'}}>
-        {story()}
-    </View>
-    
+    <MainContent>{story()}</MainContent>
   ))
   .add('Inter Regular', () => renderFont('Inter Regular'))
   .add('Inter SemiBold', () => renderFont('Inter SemiBold'))
@@ -16,6 +14,6 @@ storiesOf('Fonts', module)
 
 const renderFont = fontFamily => (
   <Text style={{ fontFamily, fontSize: 24, lineHeight: 30 }}>
-    The quick brown fox jumps over the lazy dog.
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
   </Text>
 );
