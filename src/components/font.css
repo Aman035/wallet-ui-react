@@ -28,3 +28,9 @@ body {
     font-style: normal;
     font-weight: 500;
   }
+  @font-face {
+    font-family: 'PaytoneOne Regular';
+    src: url('../assets/font/PaytoneOne-Regular.ttf') format('truetype');
+    font-style: normal;
+    font-weight: 400;
+  }
