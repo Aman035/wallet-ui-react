@@ -29,8 +29,8 @@ export const Button = ({ onPress, disabled, children='Btn Text',style}) => (
   </TouchableOpacity>
 );
 
-Button.propTypes = {
-  onPress: PropTypes.func.isRequired,
-  disabled: PropTypes.bool,
-  children: PropTypes.node,
-};
+// Button.propTypes = {
+//   onPress: PropTypes.func.isRequired,
+//   disabled: PropTypes.bool,
+//   children: PropTypes.node,
+// };
