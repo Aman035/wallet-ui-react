@@ -2,9 +2,8 @@ import React from 'react';
 import { Text as RNText, StyleSheet } from 'react-native';
 import {font} from './style';
 import './font';
-//
+
 // Base Text
-//
 const baseStyles = StyleSheet.create({
     text: {
       fontFamily: 'Inter Regular',
@@ -20,10 +19,7 @@ const baseStyles = StyleSheet.create({
     </RNText>
   );
 
-  //
   // H1 Text
-  //
-  
   const h1Styles = StyleSheet.create({
     text: {
       fontFamily: 'Inter Regular',
@@ -36,10 +32,7 @@ const baseStyles = StyleSheet.create({
     <Text style={[h1Styles.text, style]}>{children}</Text>
   );
 
-    //
   // H2 Text
-  //
-  
   const h2Styles = StyleSheet.create({
     text: {
       fontFamily: 'Inter Regular',
@@ -52,10 +45,7 @@ const baseStyles = StyleSheet.create({
     <Text style={[h2Styles.text, style]}>{children}</Text>
   );
   
-  //
   // H3 Text
-  //
-  
   const h3Styles = StyleSheet.create({
     text: {
       fontFamily: 'Inter Regular',
@@ -68,9 +58,7 @@ const baseStyles = StyleSheet.create({
     <Text style={[h3Styles.text, style]}>{children}</Text>
   );
 
-  //
   // H4 Text
-  //
   
   const h4Styles = StyleSheet.create({
     text: {
@@ -83,5 +71,18 @@ const baseStyles = StyleSheet.create({
   export const H4Text = ({ children, style }) => (
     <Text style={[h4Styles.text, style]}>{children}</Text>
   );
+
+  const h5Styles = StyleSheet.create({
+    text: {
+      fontFamily: 'PaytoneOne Regular',
+      fontSize: font.sizeXXL,
+      lineHeight: font.lineHeightXXL,
+    },
+  });
+  
+  export const H5Text = ({ children, style }) => (
+    <Text style={[h5Styles.text, style]}>{children}</Text>
+  );
+  
   export default Text;
  

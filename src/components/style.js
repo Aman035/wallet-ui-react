@@ -1,5 +1,7 @@
 export const color = {
-    orange : '#F7931A'
+    orange : '#F7931A',
+    blue : '#1C376B',
+    white : '#ffffff'
   };
   
   export const font = {
