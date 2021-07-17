@@ -1,6 +1,6 @@
 # React Native Web Storybook
 
-This demo project shows usage of Storybook using React Native components, leveraging React Native for Web.
+This Project is an implementation bitcoin-wallet-ui kit using React Native.
 
 ## Usage
 - Run `npm install`
