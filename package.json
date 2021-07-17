@@ -1,8 +1,12 @@
 {
+  "homepage": "http://aman035.github.io/wallet-ui-react",
   "name": "wallet-ui-react",
   "version": "1.0.0",
   "scripts": {
-    "storybook": "start-storybook"
+    "storybook": "start-storybook",
+    "predeploy": "npm run build-storybook",
+    "deploy-storybook": "gh-pages -d storybook-static",
+    "build-storybook": "build-storybook"
   },
   "author": "Aman Gupta",
   "dependencies": {
@@ -18,6 +22,7 @@
     "@storybook/addons": "^5.0.6",
     "@storybook/react": "^5.0.6",
     "babel-loader": "^8.2.2",
-    "core-js": "^2.5.7"
+    "core-js": "^2.5.7",
+    "gh-pages": "^3.2.3"
   }
 }
