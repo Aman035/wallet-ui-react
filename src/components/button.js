@@ -9,24 +9,24 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     minHeight: 60,
-    minWidth: 60,
+    minWidth: 60
   },
 });
 
-export const Button = ({ onPress, disabled, children = '1', style }) => (
+export const Button = ({ onPress, disabled, children, style }) => (
   <TouchableOpacity
     style={[{ opacity: disabled ? 0.5 : 1 }, styles.touchable, style]}
     disabled={disabled}
     onPress={onPress}
   >
-    <H3Text>{children}</H3Text>
+    {children}
   </TouchableOpacity>
 );
 
 Button.propTypes = {
   onPress: PropTypes.func.isRequired,
   disabled: PropTypes.bool,
-  children: PropTypes.string,
+  children: PropTypes.node,
   style: ViewPropTypes.style,
 };
 
@@ -51,7 +51,7 @@ export const Button2 = ({ onPress, disabled, children='Btn Text',style}) => (
   </TouchableOpacity>
 );
 
-Button.propTypes = {
+Button2.propTypes = {
   onPress: PropTypes.func.isRequired,
   disabled: PropTypes.bool,
   children: PropTypes.string,

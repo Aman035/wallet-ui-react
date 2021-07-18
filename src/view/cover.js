@@ -1,5 +1,5 @@
 import React from 'react';
-import {Button} from '../components/button';
+import {Button2} from '../components/button';
 import { View ,StyleSheet} from 'react-native';
 import MatressIcon from '../assets/img/Logo';
 import { H5Text , H3Text } from '../components/text';
@@ -44,7 +44,7 @@ export const Cover = ()=>{
                 </View>
             </View>
             <View style={styles.btnView}>
-                <Button style={styles.btn} children={'Make my bed'}/>
+                <Button2 style={styles.btn} children={'Make my bed'} onPress = {()=>{}}/>
             </View>
         </View>
     )
