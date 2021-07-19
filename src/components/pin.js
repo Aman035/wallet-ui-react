@@ -1,12 +1,59 @@
 import React from 'react';
-import { StyleSheet, View} from 'react-native';
+import { StyleSheet, View ,ViewPropTypes} from 'react-native';
 import PropTypes from 'prop-types';
 import { H3Text , H4Text } from './text';
 import Button from './button';
 import BackspaceIcon from '../assets/icon/backspace';
+import {color} from './style';
 import './font';
 
-const keyboardStyles = StyleSheet.create({
+// Pin Entry
+const pinEntryStyles = StyleSheet.create({
+  wrapper: {
+    flexDirection: 'row',
+    alignItems: 'center',
+  },
+});
+
+export const PinSecret = ({ pin, style }) => (
+  <View style={[pinEntryStyles.wrapper, style]}>
+    <PinBubble pin_num={pin[0]} />
+    <PinBubble pin_num={pin[1]} />
+    <PinBubble pin_num={pin[2]} />
+    <PinBubble pin_num={pin[3]} />
+  </View>
+);
+
+PinSecret.propTypes = {
+  pin: PropTypes.string.isRequired,
+  style: ViewPropTypes.style,
+};
+
+// Pin Bubble
+const bubbleStyles = StyleSheet.create({
+  bubble: {
+    margin: 4.5,
+    height: 20,
+    width: 20,
+    backgroundColor: color.white,
+    borderRadius: '100%',
+    borderColor: color.black,
+    borderStyle: 'solid',
+    borderWidth: 2.5,
+  },
+  filled: {
+    backgroundColor : color.black
+  },
+});
+
+const PinBubble = ({ pin_num }) => (
+  <View style={[bubbleStyles.bubble, pin_num ? bubbleStyles.filled : null]} />
+);
+
+PinBubble.propTypes = {pin_num: PropTypes.string};
+
+//Pin Pad
+const pinpadStyles = StyleSheet.create({
     wrapper: {
       alignSelf: 'stretch',
       flexDirection: 'row',
@@ -20,25 +67,25 @@ const keyboardStyles = StyleSheet.create({
     },
   });
   
-  export const PinKeyboard = ({onInput, onBackspace}) => (
-    <View style={keyboardStyles.wrapper}>
-      <View style={keyboardStyles.column}>
-        <View style={keyboardStyles.row}>
+  export const PinPad = ({onInput, onBackspace}) => (
+    <View style={pinpadStyles.wrapper}>
+      <View style={pinpadStyles.column}>
+        <View style={pinpadStyles.row}>
           <PinKey onPress={onInput} num="1" />
           <PinKey onPress={onInput} num="2" label="ABC" />
           <PinKey onPress={onInput} num="3" label="DEF" />
         </View>
-        <View style={keyboardStyles.row}>
+        <View style={pinpadStyles.row}>
           <PinKey onPress={onInput} num="4" label="GHI" />
           <PinKey onPress={onInput} num="5" label="JKL" />
           <PinKey onPress={onInput} num="6" label="MNO" />
         </View>
-        <View style={keyboardStyles.row}>
+        <View style={pinpadStyles.row}>
           <PinKey onPress={onInput} num="7" label="PQRS" />
           <PinKey onPress={onInput} num="8" label="TUV" />
           <PinKey onPress={onInput} num="9" label="WXYZ" />
         </View>
-        <View style={keyboardStyles.row}>
+        <View style={pinpadStyles.row}>
           <PinKey onPress={() => {}} />
           <PinKey onPress={onInput} num="0" />
           <BackspaceKey onPress={onBackspace} />
@@ -47,7 +94,7 @@ const keyboardStyles = StyleSheet.create({
     </View>
   );
   
-  PinKeyboard.propTypes = {
+  PinPad.propTypes = {
     onInput: PropTypes.func,
     onBackspace: PropTypes.func
   };
