@@ -110,12 +110,13 @@ const pinpadStyles = StyleSheet.create({
     text: {
       fontFamily: 'Inter Regular',
       fontSize: 24,
-      lineHeight: 24,
+      lineHeight: 27,
     },
     label: {
       fontFamily: 'Inter Regular',
-      fontSize: 10,
-      lineHeight: 10,
+      fontSize: 13,
+      lineHeight: 18,
+      color : color.grey
     },
   });
   
