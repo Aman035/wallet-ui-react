@@ -13,6 +13,7 @@ export const color = {
     sizeBase: 16,
     sizeM: 18,
     sizeL: 20,
+    sizeXL : 30,
     sizeXXL: 40,
     sizeXXXL: 80,
     lineHeightXS: 14,
