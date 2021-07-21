@@ -2,8 +2,9 @@ import React, { useState } from 'react';
 import { View ,StyleSheet } from 'react-native';
 import PropTypes from 'prop-types';
 import MainContent from '../components/main-content';
-import { H1Text ,H3Text} from '../components/text';
+import { H1Text ,H3Text , H6Text} from '../components/text';
 import { PinSecret, PinPad } from '../components/pin';
+import { color } from '../components/style';
 
 //
 // Set Pin View (Mobile)
@@ -20,11 +21,11 @@ const styles = StyleSheet.create({
   text: {
     marginTop: 10,
     textAlign: 'center',
-    maxWidth: 250,
+    color : color.grey
   },
   pinwrap : {
     paddingTop: 30,
-    paddingBottom: 30
+    paddingBottom: 60
   }
 });
 
@@ -32,20 +33,21 @@ const ChoosePin = () => {
 
     const [pin,setPin] = useState('');
 
-    const pushPin = (val)=>{
-
-        console.log(val);
+    const pushPin = async(val)=>{
+        if(pin.length <4)
+        setPin(pin + val);
     }
 
     const popPin = ()=>{
-        console.log("Pop");
+        if(pin.length>0)
+        setPin(pin.slice(0, -1));
     }
 
     return(
     <MainContent style={styles.content}>
-      <H1Text style={styles.title}>Set PIN</H1Text>
+      <H6Text style={styles.title}>Choose a PIN</H6Text>
       <H3Text style={styles.text}>
-        Type the PIN you want to use to unlock your wallet.
+        Make Sure you can remember it.
       </H3Text>
       <View style={styles.pinwrap}>
         <PinSecret pin={pin} />
