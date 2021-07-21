@@ -84,5 +84,16 @@ const baseStyles = StyleSheet.create({
     <Text style={[h5Styles.text, style]}>{children}</Text>
   );
   
+  const h6Styles = StyleSheet.create({
+    text: {
+      fontFamily: 'Inter SemiBold',
+      fontSize: font.sizeL,
+      lineHeight: font.lineHeightL,
+    },
+  });
+  
+  export const H6Text = ({ children, style }) => (
+    <Text style={[h6Styles.text, style]}>{children}</Text>
+  );
   export default Text;
  
