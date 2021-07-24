@@ -3,9 +3,8 @@ import { View ,StyleSheet } from 'react-native';
 import MainContent from '../components/main-content';
 import {H3Text , H6Text} from '../components/text';
 import { PinSecret, PinPad } from '../components/pin';
-import { color } from '../components/style';
 
-//choose Pin View
+//Login By Pin View
 const styles = StyleSheet.create({
   content: {
     paddingLeft: 20,
@@ -28,7 +27,7 @@ const styles = StyleSheet.create({
   }
 });
 
-const ChoosePin = () => {
+const LoginPin = () => {
 
     const [pin,setPin] = useState('');
 
@@ -60,4 +59,4 @@ const ChoosePin = () => {
     </MainContent>
 )};
 
-export default ChoosePin;
+export default LoginPin;

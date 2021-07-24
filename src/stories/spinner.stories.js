@@ -6,4 +6,4 @@ storiesOf('Spinner', module)
   .addDecorator(story => (
       <MainContent style={{ justifyContent: 'center',padding : 10 }}>{story()}</MainContent>
   ))
-  .add('Loader', () => <Spinner/>);
+  .add('Loader', () => <Spinner style = {{height : 70}}/>);
