@@ -4,7 +4,6 @@ function Spinner(props) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      style={{ margin: "auto" }}
       width="200"
       height="200"
       display="block"
