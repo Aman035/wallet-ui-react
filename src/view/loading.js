@@ -15,19 +15,22 @@ const styles = StyleSheet.create({
         alignItems:'center',
         justifyContent:'center'
     },
-    heading : {
-        width : '44%',
-        margin : 20,
-        textAlign : 'center'
+    load : {
+        padding :20
     }
 })
 
 const Loading = () =>{
     return(
         <View style={styles.head}>
-            <LoadIcon style = {{height : 70}}/>
-            <View style={styles.heading}>
-                <H3Text>Restoring wallet from iCloud...</H3Text>
+            <View style = {styles.load}>
+                <LoadIcon/>
+            </View>
+            <View>
+                <H3Text>Restoring wallet</H3Text>
+            </View>
+            <View>
+                <H3Text>from icloud...</H3Text>
             </View>
         </View>
     )
