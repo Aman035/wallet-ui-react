@@ -6,7 +6,7 @@ import '../components/font';
 
 storiesOf('Fonts', module)
   .addDecorator(story => (
-    <MainContent style={{ justifyContent: 'center' }}>{story()}</MainContent>
+    <MainContent style={{ justifyContent: 'center' , padding : 20 }}>{story()}</MainContent>
   ))
   .add('PaytoneOne Reglar' , () => renderFont('PaytoneOne Regular'))
   .add('Inter Regular', () => renderFont('Inter Regular'))
@@ -14,7 +14,7 @@ storiesOf('Fonts', module)
   .add('Inter Medium', () => renderFont('Inter Medium'));
 
 const renderFont = fontFamily => (
-  <Text style={{ fontFamily, fontSize: 28, lineHeight: 30 }}>
+  <Text style={{ fontFamily, fontSize: 28, lineHeight: 30  ,textAlign : 'center'}}>
     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
   </Text>
 );
