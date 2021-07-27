@@ -8,7 +8,7 @@ import MainContent from '../components/main-content';
 
 storiesOf('Button', module)
   .addDecorator(story => (
-    <MainContent>{story()}</MainContent>
+    <MainContent style={{ justifyContent: 'center' , padding : 20 }}>{story()}</MainContent>
   ))
   .add('Default Btn', () => (<Button onPress = {action('clicked')} style={{borderStyle : 'solid' , borderColor : '#000000' , borderWidth : '1px'}}/>))
   .add('Btn1', () => (<Button2 onPress={action('clicked')} style={{backgroundColor : color.orange}}/>))

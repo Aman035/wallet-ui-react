@@ -11,33 +11,24 @@ import {View , StyleSheet} from 'react-native';
 
 const styles = StyleSheet.create({
   container : {
-    position : 'absolute' , 
-    top : 0 ,
-    left : 0, 
-    bottom : 0, 
-    right : 0,
     justifyContent : 'center',
     alignItems : 'center',
   },
 
   container2 : {
-    position : 'absolute' , 
-    top : 0 ,
-    left : 0, 
-    bottom : 0, 
-    right : 0,
     justifyContent : 'center',
     alignItems : 'center',
-    backgroundColor : color.blue
+    backgroundColor : color.blue,
+    width : '100vh'
   }
 })
 
 storiesOf('Icons', module)
   .addDecorator(story => (
-      <View style={styles.container}>{story()}</View>
+      <MainContent style={styles.container}>{story()}</MainContent>
   ))
   .add('Matress', () => <MatressIcon/>)
   .add('Backspace' , () => <BackspaceIcon/>)
   .add('Setting' , () => <SettingIcon height={21} width={20}/>)
   .add('Correct ' ,() => <CorrectIcon/>)
-  .add('Right Arrow' , ()=> (<View style = {styles.container2}><RightArrowIcon/></View>));
+  .add('Right Arrow' , ()=> (<MainContent style = {styles.container2}><RightArrowIcon/></MainContent>));
