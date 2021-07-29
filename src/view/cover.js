@@ -16,7 +16,7 @@ const styles = StyleSheet.create({
         paddingVertical : 20
     },
     btn : {
-        backgroundColor : color.blue,
+        backgroundColor : color.bitcoin_blue,
         marginTop : 'auto',
         marginBottom : 20
     }

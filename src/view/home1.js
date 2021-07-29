@@ -17,6 +17,7 @@ const styles = StyleSheet.create({
     container : {
         justifyContent : 'center',
         alignItems : 'center',
+        paddingBottom :20
     },
     heading1 : {
         marginTop : 40,
@@ -30,8 +31,8 @@ const styles = StyleSheet.create({
         paddingHorizontal : 50
     },
     button : {
-        backgroundColor : color.blue,
-        width : '70%',
+        backgroundColor : color.bitcoin_blue,
+        width : '50%',
         marginHorizontal : 'auto',
         marginTop : 25
     }
