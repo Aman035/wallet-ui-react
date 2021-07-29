@@ -1,9 +1,20 @@
 export const color = {
-    orange : '#F7931A',
-    blue : '#1C376B',
-    white : '#ffffff',
+    white : '#FFFFFF',
+    neutral1 : '#F8F8F8' ,
+    neutral2 : '#F4F4F4' ,
+    neutral3 : '#EDEDED' ,
+    neutral4 : '#DEDEDE' ,
+    neutral5 : '#BBBBBB' ,
+    neutral6 : '#999999' ,
+    neutral7 : '#777777' , 
+    neutral8 : '#404040' , 
     black : '#000000',
-    grey : '#777777'
+    bitcoin_orange : '#F7931A',
+    bitcoin_blue : '#1C376B',
+    red : '#EB5757',
+    green : '#27AE60',
+    blue : '#2D9CDB',
+    purple : '#BB6BD9'
   };
   
   export const font = {
