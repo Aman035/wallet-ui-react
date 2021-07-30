@@ -9,13 +9,21 @@ import RightArrowIcon from '../assets/icon/arrow_right';
 import SingleBedIcon from '../assets/icon/single_bed';
 import DoubleBedIcon from '../assets/icon/double_bed';
 import TripleBedIcon from '../assets/icon/triple_bed';
+import * as AllFilled from '../assets/icon/filled';
+import * as AllOutlined from '../assets/icon/outline';
 import { color } from '../components/style';
 import {View , StyleSheet} from 'react-native';
+
+
+const Filled = Object.values(AllFilled);
+const Outline = Object.values(AllOutlined);
 
 const styles = StyleSheet.create({
   container : {
     justifyContent : 'center',
     alignItems : 'center',
+    flexDirection : 'row',
+    flexWrap : 'wrap'
   },
 
   container2 : {
@@ -23,18 +31,23 @@ const styles = StyleSheet.create({
     alignItems : 'center',
     backgroundColor : color.blue,
     width : '100vh'
+  },
+  icon : {
+    height : 80,width : 80,
+    alignItems : 'center',
+    justifyContent : 'center'
   }
 })
 
 storiesOf('Icons', module)
   .addDecorator(story => (
-      <MainContent style={styles.container}>{story()}</MainContent>
+      <MainContent style={styles.container}>
+        {story()}
+      </MainContent>
   ))
+  .add('Filled Icons' , () => Filled.map((Each ,i)=><View key = {i} style={styles.icon}><Each/></View>))
+  .add('Outlined Icons' , () => Outline.map((Each ,i)=><View key = {i} style={styles.icon}><Each/></View>))
   .add('Matress', () => <MatressIcon/>)
-  .add('Backspace' , () => <BackspaceIcon/>)
-  .add('Setting' , () => <SettingIcon height={21} width={20}/>)
-  .add('Correct ' ,() => <CorrectIcon/>)
-  .add('Right Arrow' , ()=> (<MainContent style = {styles.container2}><RightArrowIcon/></MainContent>))
   .add('SingleBed ' ,() => <SingleBedIcon/>)
   .add('DoubleBed ' ,() => <DoubleBedIcon/>)
-  .add('TripleBed ' ,() => <TripleBedIcon/>)
+  .add('TripleBed ' ,() => <TripleBedIcon/>);
