@@ -33,7 +33,7 @@ const styles = StyleSheet.create({
     width : '100vh'
   },
   icon : {
-    height : 80,width : 80,
+    height : 100,width : 100,
     alignItems : 'center',
     justifyContent : 'center'
   }
