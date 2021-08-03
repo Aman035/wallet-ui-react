@@ -12,11 +12,9 @@ const styles = StyleSheet.create({
       minHeight: 75,
     },
     settingHeader : {
-      padding :20,
       alignSelf : 'flex-end'
     },
     backHeader : {
-      padding :20,
       alignSelf : 'flex-start'
     }
 })
