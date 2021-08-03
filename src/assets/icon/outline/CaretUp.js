@@ -11,7 +11,7 @@ function SvgCaretUp(props) {
       {...props}
     >
       <Path
-        d="M5 9.929l6.364 6.364a1 1 0 001.414 0l6.364-6.364"
+        d="M10.5 17.5L15.5 12.5L20.5 17.5"
         stroke="#000"
         strokeLinecap="round"
       />

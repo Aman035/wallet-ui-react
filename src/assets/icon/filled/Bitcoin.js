@@ -4,10 +4,8 @@ import Svg, { Path } from "react-native-svg";
 function SvgBitcoin(props) {
   return (
     <Svg
-      width={24}
-      height={24}
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
+      height = {24}
+      width = {24}
       {...props}
     >
       <Path
