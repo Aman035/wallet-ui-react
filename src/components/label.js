@@ -38,7 +38,7 @@ export const BalanceLabelNumeral = ({ children, style }) => (
 );
 
 BalanceLabelNumeral.propTypes = {
-  children: PropTypes.string.isRequired,
+  children: PropTypes.node.isRequired,
   style: RNText.propTypes.style,
 };
 
