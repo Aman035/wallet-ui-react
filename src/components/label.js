@@ -13,7 +13,7 @@ const balanceStyles = StyleSheet.create({
     fontFamily: "Inter Regular",
     fontSize: font.sizeL,
     lineHeight: null,
-    letterSpacing: 2,
+    letterSpacing: 1,
   },
 });
 
@@ -38,7 +38,7 @@ export const BalanceLabelNumeral = ({ children, style }) => (
 );
 
 BalanceLabelNumeral.propTypes = {
-  children: PropTypes.string.isRequired,
+  children: PropTypes.node.isRequired,
   style: RNText.propTypes.style,
 };
 
@@ -49,9 +49,9 @@ const smallBalanceStyles = StyleSheet.create({
   },
   numeral: {
     fontFamily: "Inter Regular",
-    fontSize: font.sizeM,
-    lineHeight: font.lineHeightM,
-    letterSpacing: 2,
+    fontSize: font.sizeBase,
+    lineHeight: font.lineHeightBase,
+    letterSpacing: 1,
   },
 });
 
