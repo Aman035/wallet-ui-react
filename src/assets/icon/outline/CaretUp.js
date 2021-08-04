@@ -14,6 +14,7 @@ function SvgCaretUp(props) {
         d="M10.5 17.5L15.5 12.5L20.5 17.5"
         stroke="#000"
         strokeLinecap="round"
+        {...props}
       />
     </Svg>
   );

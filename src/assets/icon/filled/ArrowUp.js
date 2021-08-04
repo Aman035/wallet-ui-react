@@ -12,7 +12,7 @@ function SvgArrowUp(props) {
     >
       <Path
         d="M12.012 21L12 3.211M19 9.988L12 3 5 9.988"
-        stroke="#000"
+        stroke= {props.stroke?props.stroke :"#000"}
         strokeWidth={1.5}
         strokeLinecap="round"
         strokeLinejoin="round"
