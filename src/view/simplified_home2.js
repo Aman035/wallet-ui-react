@@ -1,5 +1,5 @@
 import React from "react";
-import { View, StyleSheet } from "react-native";
+import { View, StyleSheet, Text } from "react-native";
 import SingleBedIcon from "../assets/icon/single_bed";
 import { Setting_Header } from "../components/header";
 import MainContent from "../components/main-content";
@@ -7,8 +7,9 @@ import { BalanceLabel, BalanceLabelNumeral, SmallBalanceLabel } from "../compone
 import { IconButton } from "../components/button";
 import ArrowUpIcon from "../assets/icon/filled/ArrowUp";
 import ArrowDownIcon from "../assets/icon/filled/ArrowDown";
+import ArrowRightIcon from "../assets/icon/filled/ArrowRight";
 import BitcoinIcon from "../assets/icon/filled/Bitcoin";
-import { H4Text } from "../components/text";
+import { H3Text, H4Text } from "../components/text";
 import { color } from "../components/style";
 import Footer from "../components/footer";
 
@@ -16,7 +17,7 @@ const styles = StyleSheet.create({
   container: {
     justifyContent: "center",
     alignItems: "center",
-    paddingBottom: 20,
+    paddingBottom: 40,
   },
   button: {
     borderColor: color.neutral3,
@@ -39,9 +40,11 @@ const styles = StyleSheet.create({
   },
 });
 
-const Simplified_Home = () => (
+const Simplified_Home2 = () => (
   <MainContent>
-    <Setting_Header />
+    <Setting_Header>
+      <Text>Back</Text>
+    </Setting_Header>
     <MainContent style={styles.container}>
       <SingleBedIcon height={40} />
       <BalanceLabel style={styles.label}>
@@ -61,9 +64,20 @@ const Simplified_Home = () => (
           <H4Text style={styles.btntext}>Receive</H4Text>
         </IconButton>
       </View>
+      <View style={{ flexDirection: "row", padding: 30 }}>
+        <View style={{ flex: 3 }}>
+          <H3Text>Set A recovery email and sleep peacefully.</H3Text>
+        </View>
+        <IconButton>
+          <ArrowRightIcon />
+        </IconButton>
+      </View>
     </MainContent>
-    <Footer>1 transaction today</Footer>
+    <Footer>
+      Receiving <BitcoinIcon height={20} />
+      1.6240 2785
+    </Footer>
   </MainContent>
 );
 
-export default Simplified_Home;
+export default Simplified_Home2;

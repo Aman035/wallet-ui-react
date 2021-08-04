@@ -1,6 +1,6 @@
 import React from "react";
-import { View, StyleSheet } from "react-native";
-import SingleBedIcon from "../assets/icon/single_bed";
+import { View, StyleSheet, Text } from "react-native";
+import TripleBedIcon from "../assets/icon/triple_bed";
 import { Setting_Header } from "../components/header";
 import MainContent from "../components/main-content";
 import { BalanceLabel, BalanceLabelNumeral, SmallBalanceLabel } from "../components/label";
@@ -10,7 +10,7 @@ import ArrowDownIcon from "../assets/icon/filled/ArrowDown";
 import BitcoinIcon from "../assets/icon/filled/Bitcoin";
 import { H4Text } from "../components/text";
 import { color } from "../components/style";
-import Footer from "../components/footer";
+import { LightFooter } from "../components/footer";
 
 const styles = StyleSheet.create({
   container: {
@@ -39,31 +39,31 @@ const styles = StyleSheet.create({
   },
 });
 
-const Simplified_Home = () => (
-  <MainContent>
-    <Setting_Header />
+const Multisig_Home = () => (
+  <MainContent style={{ backgroundColor: color.bitcoin_blue }}>
+    <Setting_Header></Setting_Header>
     <MainContent style={styles.container}>
-      <SingleBedIcon height={40} />
+      <TripleBedIcon height={40} fill="#fff" />
       <BalanceLabel style={styles.label}>
-        <BalanceLabelNumeral>
-          <BitcoinIcon height={20} />
+        <BalanceLabelNumeral style={{ color: color.white }}>
+          <BitcoinIcon height={20} fill="#fff" />
           1.6240 2785
         </BalanceLabelNumeral>
       </BalanceLabel>
       <SmallBalanceLabel style={styles.smallabel}>$41,328.9</SmallBalanceLabel>
       <View style={{ flexDirection: "row" }}>
         <IconButton style={styles.button}>
-          <ArrowUpIcon />
+          <ArrowUpIcon stroke="#fff" />
           <H4Text style={styles.btntext}>Send</H4Text>
         </IconButton>
         <IconButton style={styles.button}>
-          <ArrowDownIcon />
+          <ArrowDownIcon stroke="#fff" />
           <H4Text style={styles.btntext}>Receive</H4Text>
         </IconButton>
       </View>
     </MainContent>
-    <Footer>1 transaction today</Footer>
+    <LightFooter>1 transaction today</LightFooter>
   </MainContent>
 );
 
-export default Simplified_Home;
+export default Multisig_Home;
