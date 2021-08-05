@@ -1,5 +1,6 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { View ,StyleSheet } from 'react-native';
+import { observer } from 'mobx-react';
 import MainContent from '../components/main-content';
 import {H3Text , H6Text} from '../components/text';
 import { PinSecret, PinPad } from '../components/pin';
@@ -27,25 +28,12 @@ const styles = StyleSheet.create({
   }
 });
 
-const LoginPin = () => {
-
-    const [pin,setPin] = useState('');
-
-    const pushPin = async(val)=>{
-        if(pin.length <4)
-        setPin(pin + val);
-    }
-
-    const popPin = ()=>{
-        if(pin.length>0)
-        setPin(pin.slice(0, -1));
-    }
-
+const LoginPin = ({store ,auth}) => {
     return(
     <MainContent style={styles.content}>
       <H6Text style={styles.title}>Enter Your PIN to log in</H6Text>
       <View style={styles.pinwrap}>
-        <PinSecret pin={pin} />
+        <PinSecret pin={store.auth.pin} />
       </View>
       <View style = {styles.forgotwrap}>
         <H3Text style={styles.text}>
@@ -53,10 +41,10 @@ const LoginPin = () => {
         </H3Text>
       </View>
       <PinPad
-        onInput={pushPin}
-        onBackspace={popPin}
+        onInput={digit => auth.pushPinDigit({ digit, param: 'pin' })}
+        onBackspace={() => auth.popPinDigit({ param: 'pin' })}
       />
     </MainContent>
 )};
 
-export default LoginPin;
+export default observer(LoginPin);
