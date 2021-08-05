@@ -14,6 +14,8 @@
     "@svgr/cli": "^5.5.0",
     "@types/react": "^16.9.49",
     "@types/react-native": "^0.63.13",
+    "mobx": "^6.3.2",
+    "mobx-react": "^7.2.0",
     "react": "^16.13.1",
     "react-native": "^0.63.2",
     "react-native-web": "^0.11.2",
