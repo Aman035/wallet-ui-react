@@ -9,11 +9,17 @@ import Home1 from '../view/home1';
 import Simplified_Home from '../view/simplified_home';
 import MultiSig_Home from '../view/multisig_home';
 import Simplified_Home2 from '../view/simplified_home2';
+import { Store } from '../store';
+import Auth from '../action/auth';
+
+const store = new Store();
+store.init();
+const auth = new Auth(store);
 
 storiesOf('Screens', module)
 .add('Cover', () => <Cover/>)
-.add('Choose Pin', () => (<ChoosePin/>))
-.add('Confirm Pin' , () => (<ConfirmPin/>))
+.add('Choose Pin', () => (<ChoosePin store={store} auth={auth}/>))
+.add('Confirm Pin' , () => (<ConfirmPin store={store} auth={auth}/>))
 .add('Login Pin' , () => (<LoginPin/>))
 .add('Loading' , () => (<Loading/>))
 .add('Home', () => (<Home1/>))
