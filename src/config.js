@@ -1,0 +1,1 @@
+module.exports.PIN_LENGTH = 4;
