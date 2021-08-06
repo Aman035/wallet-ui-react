@@ -57,14 +57,14 @@ The current goal of the project is to implement and provide the following featur
 
 - Icon Set
 <p align="center">
-<img src="/src/assets/img/docs/icon_mobile.png" height = "300px"/>
-<img src="/src/assets/img/docs/icon_web.png" height = "300px"/>
+<img src="/src/assets/img/docs/icon_mobile.png" height = "280px"/>
+<img src="/src/assets/img/docs/icon_web.png" height = "280px"/>
 </p>
 
 - Theme Colors : Dark,Light and User Defined
 <p align="center">
-<img src="/src/assets/img/docs/color_mobile.png" height = "300px"/>
-<img src="/src/assets/img/docs/color_web.png" height = "300px"/>
+<img src="/src/assets/img/docs/color_mobile.png" height = "280px"/>
+<img src="/src/assets/img/docs/color_web.png" height = "280px"/>
 </p>
 
 - UI Components 
