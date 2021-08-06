@@ -56,17 +56,25 @@ With the react-native-web the components can be used for web apps also.
 The current goal of the project is to implement and provide the following features/functionality (most of these are currently work in progress) : 
 
 - Icon Set
-<p>
+<p align="center">
 <img src="/src/assets/img/docs/icon_mobile.png" height = "300px"/>
 <img src="/src/assets/img/docs/icon_web.png" height = "300px"/>
 </p>
 
 - Theme Colors : Dark,Light and User Defined
+<p align="center">
 <img src="/src/assets/img/docs/color_mobile.png" height = "300px"/>
 <img src="/src/assets/img/docs/color_web.png" height = "300px"/>
+</p>
 
 - UI Components 
 - Screens
+<p align="center">
+<img src="/src/assets/img/docs/screen1.png" height = "300px"/>
+<img src="/src/assets/img/docs/screen2.png" height = "300px"/>
+<img src="/src/assets/img/docs/screen3.png" height = "300px"/>
+</p>
+
 - Workflows
 
 <!-- Installation -->
