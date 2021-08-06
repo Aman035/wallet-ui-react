@@ -11,7 +11,7 @@
     <!-- <img src="images/logo.png" alt="Logo" width="80" height="80"> -->
   <h3 align="center">Wallet UI React</h3>
   <p align="center">
-    <a href="https://aman035.github.io/wallet-ui-react/?path=/story/button--default-btn">View Demo</a>
+    <a href="https://aman035.github.io/wallet-ui-react/?path=/story">View Demo</a>
     ·
     <a href="https://github.com/Aman035/wallet-ui-react/issues">Report Bug</a>
     ·
@@ -41,7 +41,7 @@
 ## About The Project
 
 Wallet UI React is a react native implementation of <a href="https://github.com/GBKS/bitcoin-wallet-ui-kit">Bitcoin Wallet UI Kit</a>. 
-With the react-native-web the components can be used for web apps also.
+These Native Components can be used for android/ios wallets and also in web based wallets(using react-native-web).
 
 <i>It's a Work In Progress.</i>
 
@@ -55,7 +55,7 @@ With the react-native-web the components can be used for web apps also.
 
 The current goal of the project is to implement and provide the following features/functionality (most of these are currently work in progress) : 
 
-- Icon Set
+- Icon Set : Basic Icon Components for bitcoin wallets
 <p align="center">
 <img src="/src/assets/img/docs/icon_mobile.png" height = "280px"/>
 <img src="/src/assets/img/docs/icon_web.png" height = "280px"/>
@@ -67,7 +67,7 @@ The current goal of the project is to implement and provide the following featur
 <img src="/src/assets/img/docs/color_web.png" height = "280px"/>
 </p>
 
-- UI Components 
+- UI Components : Buttons , Headers , KeyPads..
 - Screens
 <p align="center">
 <img src="/src/assets/img/docs/screen1.png" height = "300px"/>
