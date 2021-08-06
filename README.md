@@ -29,7 +29,7 @@
         <li><a href="#built-with">Built With</a></li>
       </ul>
     </li>
-    <!-- <li><a href="#what's-included">What's Included</a></li> -->
+    <li><a href="#what's-included">What's Included</a></li>
     <li><a href="#installation">Installation</a></li>
     <!-- <li><a href="#usage">Usage</a></li> -->
     <li><a href="#roadmap">Roadmap</a></li>
@@ -40,7 +40,8 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-Wallet UI React is a react native implementation of <a href="https://github.com/GBKS/bitcoin-wallet-ui-kit">Bitcoin Wallet UI Kit</a>.
+Wallet UI React is a react native implementation of <a href="https://github.com/GBKS/bitcoin-wallet-ui-kit">Bitcoin Wallet UI Kit</a>. 
+With the react-native-web the components can be used for web apps also.
 
 <i>It's a Work In Progress.</i>
 
@@ -50,7 +51,18 @@ Wallet UI React is a react native implementation of <a href="https://github.com/
 * [Storybook](https://storybook.js.org/)
 
 <!-- ## What's Included -->
+## What's Included
 
+The current goal of the project is to implement and provide the following features/functionality (most of these are currently work in progress) : 
+
+- Icon Set
+<img src="/src/assets/img/docs/icon_mobile.png" height = "300px">
+<img src="/src/assets/img/docs/icon_web.png" height = "300px">
+
+- Theme Colors : Dark,Light and User Defined
+- UI Components 
+- Screens
+- Workflows
 
 <!-- Installation -->
 ## Installation
