@@ -11,7 +11,7 @@
     <!-- <img src="images/logo.png" alt="Logo" width="80" height="80"> -->
   <h3 align="center">Wallet UI React</h3>
   <p align="center">
-    <a href="https://aman035.github.io/wallet-ui-react/?path=/story/button--default-btn">View Demo</a>
+    <a href="https://aman035.github.io/wallet-ui-react/?path=/story">View Demo</a>
     ·
     <a href="https://github.com/Aman035/wallet-ui-react/issues">Report Bug</a>
     ·
@@ -29,7 +29,7 @@
         <li><a href="#built-with">Built With</a></li>
       </ul>
     </li>
-    <!-- <li><a href="#what's-included">What's Included</a></li> -->
+    <li><a href="#what's-included">What's Included</a></li>
     <li><a href="#installation">Installation</a></li>
     <!-- <li><a href="#usage">Usage</a></li> -->
     <li><a href="#roadmap">Roadmap</a></li>
@@ -40,7 +40,8 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-Wallet UI React is a react native implementation of <a href="https://github.com/GBKS/bitcoin-wallet-ui-kit">Bitcoin Wallet UI Kit</a>.
+Wallet UI React is a react native implementation of <a href="https://github.com/GBKS/bitcoin-wallet-ui-kit">Bitcoin Wallet UI Kit</a>. 
+These Native Components can be used for android/ios wallets and also in web based wallets(using react-native-web).
 
 <i>It's a Work In Progress.</i>
 
@@ -50,7 +51,31 @@ Wallet UI React is a react native implementation of <a href="https://github.com/
 * [Storybook](https://storybook.js.org/)
 
 <!-- ## What's Included -->
+## What's Included
 
+The current goal of the project is to implement and provide the following features/functionality (most of these are currently work in progress) : 
+
+- Icon Set : Basic Icon Components for bitcoin wallets
+<p align="center">
+<img src="/src/assets/img/docs/icon_mobile.png" height = "280px"/>
+<img src="/src/assets/img/docs/icon_web.png" height = "280px"/>
+</p>
+
+- Theme Colors : Dark,Light and User Defined
+<p align="center">
+<img src="/src/assets/img/docs/color_mobile.png" height = "280px"/>
+<img src="/src/assets/img/docs/color_web.png" height = "280px"/>
+</p>
+
+- UI Components : Buttons , Headers , KeyPads..
+- Screens
+<p align="center">
+<img src="/src/assets/img/docs/screen1.png" height = "300px"/>
+<img src="/src/assets/img/docs/screen2.png" height = "300px"/>
+<img src="/src/assets/img/docs/screen3.png" height = "300px"/>
+</p>
+
+- Workflows
 
 <!-- Installation -->
 ## Installation
