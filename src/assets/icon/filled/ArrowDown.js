@@ -4,8 +4,8 @@ import Svg, { Path } from "react-native-svg";
 function SvgArrowDown(props) {
   return (
     <Svg
-      width={24}
-      height={24}
+      width={44}
+      height={44}
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
       {...props}
