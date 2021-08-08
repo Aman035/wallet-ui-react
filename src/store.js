@@ -16,7 +16,8 @@
          resetPinCurrent: '',
          resetPinNew: '',
          resetPinVerify: '',
-       }
+       },
+       theme : 'light'
      });
    }
  
