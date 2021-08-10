@@ -45,8 +45,8 @@ storiesOf('Icons', module)
         {story()}
       </MainContent>
   ))
-  .add('Filled Icons' , () => Filled.map((Each ,i)=><View key = {i} style={styles.icon}><Each/></View>))
-  .add('Outlined Icons' , () => Outline.map((Each ,i)=><View key = {i} style={styles.icon}><Each/></View>))
+  .add('Filled Icons' , () => Filled.map((Each ,i)=><View key = {i} style={styles.icon}><Each height="40" width="40"/></View>))
+  .add('Outlined Icons' , () => Outline.map((Each ,i)=><View key = {i} style={styles.icon}><Each height="40" width="40"/></View>))
   .add('Matress', () => <MatressIcon/>)
   .add('SingleBed ' ,() => <SingleBedIcon/>)
   .add('DoubleBed ' ,() => <DoubleBedIcon/>)
