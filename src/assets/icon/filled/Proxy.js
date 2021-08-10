@@ -13,13 +13,13 @@ function SvgProxy(props) {
     >
       <Path
         d="M12 17V7"
-        stroke="#000"
+        stroke={props.color}
         strokeWidth={1.5}
         strokeLinecap="round"
       />
       <Path
         d="M8.934 12H4M6.585 15.061L9.538 12 6.585 8.939M19.395 12h-4.933M17.047 15.061L20 12l-2.953-3.061"
-        stroke="#000"
+        stroke={props.color}
         strokeWidth={1.5}
         strokeLinecap="round"
         strokeLinejoin="round"

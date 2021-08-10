@@ -13,7 +13,7 @@ function SvgMinus(props) {
     >
       <Path
         d="M19.152 12H4.85"
-        stroke="#000"
+        stroke={props.color}
         strokeWidth={1.5}
         strokeLinecap="round"
       />

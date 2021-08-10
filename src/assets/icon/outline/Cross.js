@@ -11,7 +11,11 @@ function SvgCross(props) {
       xmlns="http://www.w3.org/2000/svg"
       {...props}
     >
-      <Path d="M6 6l12 12M18 6L6 18" stroke="#000" strokeLinecap="round" />
+      <Path
+        d="M6 6l12 12M18 6L6 18"
+        stroke={props.color}
+        strokeLinecap="round"
+      />
     </Svg>
   );
 }

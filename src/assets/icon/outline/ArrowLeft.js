@@ -13,7 +13,7 @@ function SvgArrowLeft(props) {
     >
       <Path
         d="M21 12.012L3.211 12M9.988 19L3 12l6.988-7"
-        stroke="#000"
+        stroke={props.color}
         strokeLinecap="round"
         strokeLinejoin="round"
       />

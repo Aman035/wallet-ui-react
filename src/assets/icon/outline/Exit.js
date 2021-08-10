@@ -13,7 +13,7 @@ function SvgExit(props) {
     >
       <Path
         d="M19.285 12h-8.012M16.51 15.636L20 12l-3.49-3.636M13.454 7V4H4v16h9.454v-3"
-        stroke="#000"
+        stroke={props.color}
         strokeLinecap="round"
         strokeLinejoin="round"
       />

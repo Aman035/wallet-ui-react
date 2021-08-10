@@ -17,7 +17,7 @@ function SvgPassword(props) {
         width={17}
         height={9}
         rx={0.5}
-        stroke="#000"
+        stroke={props.color}
         strokeLinecap="round"
         strokeLinejoin="round"
       />
@@ -25,7 +25,7 @@ function SvgPassword(props) {
         cx={7}
         cy={12}
         r={1.5}
-        stroke="#000"
+        stroke={props.color}
         strokeLinecap="round"
         strokeLinejoin="round"
       />
@@ -33,7 +33,7 @@ function SvgPassword(props) {
         cx={12}
         cy={12}
         r={1.5}
-        stroke="#000"
+        stroke={props.color}
         strokeLinecap="round"
         strokeLinejoin="round"
       />
@@ -41,7 +41,7 @@ function SvgPassword(props) {
         cx={17}
         cy={12}
         r={1.5}
-        stroke="#000"
+        stroke={props.color}
         strokeLinecap="round"
         strokeLinejoin="round"
       />

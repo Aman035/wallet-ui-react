@@ -13,7 +13,7 @@ function SvgSatoshiV2(props) {
     >
       <Path
         d="M7 7.91h10M12 5.455V3M12 21v-2.455M7 12h10M7 16.09h10"
-        stroke="#000"
+        stroke={props.color}
       />
     </Svg>
   );

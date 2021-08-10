@@ -11,7 +11,7 @@ function SvgMinus(props) {
       xmlns="http://www.w3.org/2000/svg"
       {...props}
     >
-      <Path d="M19.5 12h-15" stroke="#000" strokeLinecap="round" />
+      <Path d="M19.5 12h-15" stroke={props.color} strokeLinecap="round" />
     </Svg>
   );
 }

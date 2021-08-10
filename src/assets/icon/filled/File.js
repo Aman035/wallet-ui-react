@@ -15,7 +15,7 @@ function SvgFile(props) {
         fillRule="evenodd"
         clipRule="evenodd"
         d="M13 4H7.5A1.5 1.5 0 006 5.5v13A1.5 1.5 0 007.5 20h9a1.5 1.5 0 001.5-1.5V9h-.004L13 4zm-1 1.604V9.75c0 .138.112.25.25.25h4.146a.25.25 0 00.177-.427l-4.146-4.146a.25.25 0 00-.427.177z"
-        fill="#000"
+        fill={props.color}
       />
     </Svg>
   );

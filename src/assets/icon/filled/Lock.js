@@ -15,11 +15,11 @@ function SvgLock(props) {
         fillRule="evenodd"
         clipRule="evenodd"
         d="M6 9a2 2 0 00-2 2v8a2 2 0 002 2h12a2 2 0 002-2v-8a2 2 0 00-2-2H6zm6 8a2 2 0 100-4 2 2 0 000 4z"
-        fill="#000"
+        fill={props.color}
       />
       <Path
         d="M7.75 10.75h8.5v-5a2 2 0 00-2-2h-4.5a2 2 0 00-2 2v5z"
-        stroke="#000"
+        stroke={props.color}
         strokeWidth={1.5}
       />
     </Svg>

@@ -11,8 +11,8 @@ function SvgAlert(props) {
       xmlns="http://www.w3.org/2000/svg"
       {...props}
     >
-      <Circle cx={12} cy={16.75} r={1.25} fill="#000" />
-      <Path fill="#000" d="M11 6h2v8h-2z" />
+      <Circle cx={12} cy={16.75} r={1.25} fill={props.color} />
+      <Path fill={props.color} d="M11 6h2v8h-2z" />
     </Svg>
   );
 }
