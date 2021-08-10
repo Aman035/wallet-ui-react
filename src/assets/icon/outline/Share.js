@@ -13,7 +13,7 @@ function SvgShare(props) {
     >
       <Path
         d="M20.5 3.5L3.5 9l6.5 3 7-5-5 7 3 6.5 5.5-17z"
-        stroke="#000"
+        stroke={props.color}
         strokeLinecap="round"
         strokeLinejoin="round"
       />

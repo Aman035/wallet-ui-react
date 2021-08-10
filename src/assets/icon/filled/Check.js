@@ -13,7 +13,7 @@ function SvgCheck(props) {
     >
       <Path
         d="M6 13.295L10.913 18 18 6"
-        stroke="#000"
+        stroke={props.color}
         strokeWidth={1.5}
         strokeLinecap="round"
         strokeLinejoin="round"

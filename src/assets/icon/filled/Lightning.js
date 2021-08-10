@@ -13,7 +13,7 @@ function SvgLightning(props) {
     >
       <Path
         d="M19 10.19L8.488 21l4.185-8.258H5L14.616 3l-3.09 7.284L19 10.19z"
-        fill="#000"
+        fill={props.color}
       />
     </Svg>
   );

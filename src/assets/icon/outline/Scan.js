@@ -15,7 +15,7 @@ function SvgScan(props) {
         fillRule="evenodd"
         clipRule="evenodd"
         d="M8.688 4H4v4.688h.938v-3.75h3.75V4zm0 14.063h-3.75v-3.75H4V19h4.688v-.938zm5.624.937v-.938h3.75v-3.75H19V19h-4.688zm0-14.063V4H19v4.688h-.938v-3.75h-3.75z"
-        fill="#000"
+        fill={props.color}
       />
     </Svg>
   );

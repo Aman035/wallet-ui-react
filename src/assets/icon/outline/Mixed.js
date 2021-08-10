@@ -13,7 +13,7 @@ function SvgMixed(props) {
     >
       <Path
         d="M4 16.8c6.708.082 6.496-10.932 15.96-9.4M16.57 4L20 7.44l-3.432 3.44M16.57 13.2l3.39 3.6-3.39 3.2M4 7.2c6.887-.124 6.381 11.044 15.56 9.6"
-        stroke="#000"
+        stroke={props.color}
         strokeLinecap="round"
         strokeLinejoin="round"
       />

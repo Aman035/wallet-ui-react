@@ -13,7 +13,7 @@ function SvgUsb(props) {
     >
       <Path
         d="M8 7.5h8v9a4 4 0 01-4 4v0a4 4 0 01-4-4v-9zM9.5 3.5h5v4h-5z"
-        stroke="#000"
+        stroke={props.color}
       />
     </Svg>
   );

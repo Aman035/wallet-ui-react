@@ -11,10 +11,10 @@ function SvgQuestion(props) {
       xmlns="http://www.w3.org/2000/svg"
       {...props}
     >
-      <Path fill="#000" d="M10.75 15.75h2.5v2.5h-2.5z" />
+      <Path fill={props.color} d="M10.75 15.75h2.5v2.5h-2.5z" />
       <Path
         d="M9 10c0-1.358 1.15-3 3-3s3 1.596 3 3c0 2.175-3 2.059-3 4.5"
-        stroke="#000"
+        stroke={props.color}
         strokeWidth={2}
       />
     </Svg>

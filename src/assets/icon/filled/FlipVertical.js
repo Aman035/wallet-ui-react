@@ -13,7 +13,7 @@ function SvgFlipVertical(props) {
     >
       <Path
         d="M7.5 17.611V5M4 15.602L7.5 19l3.5-3.398M16.5 6.389V19M13 8.398L16.5 5 20 8.398"
-        stroke="#000"
+        stroke={props.color}
         strokeWidth={1.5}
         strokeLinecap="round"
         strokeLinejoin="round"

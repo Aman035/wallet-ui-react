@@ -11,7 +11,11 @@ function SvgPlus(props) {
       xmlns="http://www.w3.org/2000/svg"
       {...props}
     >
-      <Path d="M12 3.5v17M20.5 12h-17" stroke="#000" strokeLinecap="round" />
+      <Path
+        d="M12 3.5v17M20.5 12h-17"
+        stroke={props.color}
+        strokeLinecap="round"
+      />
     </Svg>
   );
 }

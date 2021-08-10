@@ -11,8 +11,8 @@ function SvgInfo(props) {
       xmlns="http://www.w3.org/2000/svg"
       {...props}
     >
-      <Circle cx={12} cy={7.25} r={1.25} fill="#000" />
-      <Path fill="#000" d="M11 10h2v8h-2z" />
+      <Circle cx={12} cy={7.25} r={1.25} fill={props.color} />
+      <Path fill={props.color} d="M11 10h2v8h-2z" />
     </Svg>
   );
 }

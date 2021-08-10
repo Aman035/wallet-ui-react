@@ -13,7 +13,7 @@ function SvgCaretUp(props) {
     >
       <Path
         d="M5 9.929l6.364 6.364a1 1 0 001.414 0l6.364-6.364"
-        stroke="#000"
+        stroke={props.color}
         strokeLinecap="round"
       />
     </Svg>

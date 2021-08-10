@@ -13,7 +13,7 @@ function SvgSnowflake(props) {
     >
       <Path
         d="M12 4v16M20 12H4M18.5 8.486l-3.5 3.5 3.5 3.5M5.5 15.486l3.5-3.5-3.5-3.5M15.5 18.486l-3.5-3.5-3.5 3.5M8.5 5.486l3.5 3.5 3.5-3.5"
-        stroke="#000"
+        stroke={props.color}
         strokeWidth={1.5}
         strokeLinecap="round"
         strokeLinejoin="round"

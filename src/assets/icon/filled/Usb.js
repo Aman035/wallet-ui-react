@@ -11,8 +11,8 @@ function SvgUsb(props) {
       xmlns="http://www.w3.org/2000/svg"
       {...props}
     >
-      <Path d="M7.5 7h9v9.5a4.5 4.5 0 11-9 0V7z" fill="#000" />
-      <Path stroke="#000" d="M9.5 3.5h5v4h-5z" />
+      <Path d="M7.5 7h9v9.5a4.5 4.5 0 11-9 0V7z" fill={props.color} />
+      <Path stroke={props.color} d="M9.5 3.5h5v4h-5z" />
     </Svg>
   );
 }

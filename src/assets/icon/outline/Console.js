@@ -12,7 +12,7 @@ function SvgConsole(props) {
       {...props}
     >
       <Path
-        stroke="#000"
+        stroke={props.color}
         strokeLinecap="round"
         strokeLinejoin="round"
         d="M10 19h10.5M3.5 5l7 7-7 7"

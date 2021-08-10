@@ -13,7 +13,7 @@ function SvgUnmixed(props) {
     >
       <Path
         d="M17.611 17.5H5M15.602 21L19 17.5 15.602 14M17.611 6.5H5M15.602 10L19 6.5 15.602 3"
-        stroke="#000"
+        stroke={props.color}
         strokeWidth={1.5}
         strokeLinecap="round"
         strokeLinejoin="round"

@@ -13,7 +13,7 @@ function SvgReceive(props) {
     >
       <Path
         d="M5 15.747V18a1 1 0 001 1h12a1 1 0 001-1v-2.253M12.202 13.086V5M15.546 11.15l-3.344 3.266-3.344-3.266"
-        stroke="#000"
+        stroke={props.color}
         strokeWidth={1.5}
         strokeLinecap="round"
         strokeLinejoin="round"

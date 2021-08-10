@@ -13,7 +13,7 @@ function SvgPlus(props) {
     >
       <Path
         d="M12 4v16M20 12H4"
-        stroke="#000"
+        stroke={props.color}
         strokeWidth={1.5}
         strokeLinecap="round"
       />

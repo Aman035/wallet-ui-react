@@ -13,7 +13,7 @@ function SvgSend(props) {
     >
       <Path
         d="M5 15.747V18a1 1 0 001 1h12a1 1 0 001-1v-2.253M12.202 5.917v8.5M15.546 8.267L12.202 5 8.858 8.267"
-        stroke="#000"
+        stroke={props.color}
         strokeLinecap="round"
         strokeLinejoin="round"
       />

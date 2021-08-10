@@ -13,7 +13,7 @@ function SvgCross(props) {
     >
       <Path
         d="M6 6l12 12M18 6L6 18"
-        stroke="#000"
+        stroke={props.color}
         strokeWidth={1.5}
         strokeLinecap="round"
       />

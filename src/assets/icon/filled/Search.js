@@ -11,10 +11,16 @@ function SvgSearch(props) {
       xmlns="http://www.w3.org/2000/svg"
       {...props}
     >
-      <Circle cx={10.5} cy={10.5} r={5.75} stroke="#000" strokeWidth={1.5} />
+      <Circle
+        cx={10.5}
+        cy={10.5}
+        r={5.75}
+        stroke={props.color}
+        strokeWidth={1.5}
+      />
       <Path
         d="M15 15l4 4"
-        stroke="#000"
+        stroke={props.color}
         strokeWidth={1.5}
         strokeLinecap="round"
         strokeLinejoin="round"
