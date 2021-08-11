@@ -5,14 +5,13 @@ import MainContent from "../components/main-content";
 import * as AllFilled from "../assets/icon/filled";
 import * as AllOutlined from "../assets/icon/outline";
 import * as Hardware from "../assets/icon/myMattress/hardware_illustrations";
-import SingleBedIcon from "../assets/icon/myMattress/singleBed";
-import DoubleBedIcon from "../assets/icon/myMattress/doubleBed";
-import TripleBedIcon from "../assets/icon/myMattress/tripleBed";
-import MatressIcon from "../assets/icon/myMattress/Logo";
+import * as MattIcon from "../assets/icon/myMattress";
+import MatressLogo from "../assets/icon/myMattress/Logo";
 
 const Filled = Object.values(AllFilled);
 const Outline = Object.values(AllOutlined);
 const Illustration = Object.values(Hardware);
+const MattressIcon = Object.values(MattIcon);
 
 const styles = StyleSheet.create({
   container: {
@@ -29,91 +28,30 @@ const styles = StyleSheet.create({
   },
 });
 
-storiesOf("Icons/Light", module)
-  .addDecorator((story) => (
-    <MainContent style={styles.container}>{story()}</MainContent>
-  ))
-  .add("Filled Icons", () =>
-    Filled.map((Each, i) => (
-      <View key={i} style={styles.icon}>
-        <Each height="40" width="40" color="#000"/>
-      </View>
-    ))
-  )
-  .add("Outlined Icons", () =>
-    Outline.map((Each, i) => (
-      <View key={i} style={styles.icon}>
-        <Each height="40" width="40" color="#000"/>
-      </View>
-    ))
-  );
+const Container = ({icons , theme = 'light', height="40" , width="40" , fill="none"})=>(
+  <MainContent
+   theme = {theme}
+   style={styles.container}>
+      {icons.map((Each, i) => (
+        <View key={i} style={styles.icon}>
+          <Each height={height} width={width}  color={theme === 'light'? "#000" : "#fff"} fill={fill}/>
+        </View>
+      ))}
+   </MainContent>
+)
 
-storiesOf("Icons/Dark", module)
-  .addDecorator((story) => (
-    <MainContent style={styles.container} theme="dark">
-      {story()}
-    </MainContent>
-  ))
-  .add("Filled Icons", () =>
-    Filled.map((Each, i) => (
-      <View key={i} style={styles.icon}>
-        <Each height="40" width="40" color="#fff"/>
-      </View>
-    ))
-  )
-  .add("Outlined Icons", () =>
-    Outline.map((Each, i) => (
-      <View key={i} style={styles.icon}>
-        <Each height="40" width="40" color="#fff"/>
-      </View>
-    ))
-  );
+storiesOf("Icons", module)
+  .add("Filled Light" ,()=> <Container icons = {Filled}/>)
+  .add("Outlined Light" ,()=> <Container icons = {Outline}/>)
+  .add("Filled Dark" ,()=> <Container icons = {Filled} theme='dark'/>)
+  .add("Outlined Dark" ,()=> <Container icons = {Outline} theme='dark'/>);
 
-storiesOf("Icons/Mattress/Icons", module)
-  .addDecorator((story) => (
-    <MainContent style={styles.container} >
-      {story()}
-    </MainContent>
-  ))
-  .add("SingleBed ", () => <SingleBedIcon color="#000"/>)
-  .add("DoubleBed ", () => <DoubleBedIcon color="#000"/>)
-  .add("TripleBed ", () => <TripleBedIcon color="#000"/>)
-  .add("SingleBed_D ", () => <SingleBedIcon color="#fff" fill="#000"/>)
-  .add("DoubleBed_D ", () => <DoubleBedIcon color="#fff" fill="#000"/>)
-  .add("TripleBed_D ", () => <TripleBedIcon color="#fff" fill="#000"/>);
+storiesOf("Icons/Mattress", module)
+  .add("Hardware Light" ,()=> <Container icons = {Illustration} height="100" width="100"/>)
+  .add("Hardware Dark" ,()=> <Container icons = {Illustration} height="100" width="100" theme='dark'/>);
 
-storiesOf("Icons/Mattress/Logo", module)
-  .addDecorator((story) => (
-    <MainContent style={styles.container} >
-      {story()}
-    </MainContent>
-  ))
-  .add("Matress", () => <MatressIcon />);
-
-storiesOf("Icons/Mattress/Hardware/Light", module)
-  .addDecorator((story) => (
-    <MainContent style={styles.container}>
-      {story()}
-    </MainContent>
-  ))
-  .add("Hardware", () =>
-    Illustration.map((Each, i) => (
-      <View key={i} style={styles.icon}>
-        <Each  color="#000"/>
-      </View>
-    ))
-  );
-
-storiesOf("Icons/Mattress/Hardware/Dark", module)
-  .addDecorator((story) => (
-    <MainContent style={styles.container} theme='dark'>
-      {story()}
-    </MainContent>
-  ))
-  .add("Hardware", () =>
-    Illustration.map((Each, i) => (
-      <View key={i} style={styles.icon}>
-        <Each  color="#fff"/>
-      </View>
-    ))
-  );
+storiesOf("Icons/Mattress", module)
+  .add("Icon Light" ,()=> <Container icons = {MattressIcon}/>)
+  .add("Icon Dark" ,()=> <Container icons = {MattressIcon} theme='dark'/>)
+  .add("Logo Light", () => <MainContent><MatressLogo color="#000"/></MainContent>)
+  .add("Logo Dark", () => <MainContent theme="dark"><MatressLogo color="#fff" /></MainContent>)

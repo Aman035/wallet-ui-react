@@ -10,11 +10,13 @@ const baseStyles = StyleSheet.create({
       fontSize: font.sizeBase,
       lineHeight: font.lineHeightBase,
       zIndex: 1,
-    },
+    }
   });
   
   export const Text = ({ children, style, ...props }) => (
-    <RNText style={[baseStyles.text, style]} {...props}>
+    <RNText 
+      style={[baseStyles.text, style]}
+      {...props}>
       {children}
     </RNText>
   );
@@ -28,7 +30,7 @@ const baseStyles = StyleSheet.create({
     },
   });
   
-  export const H1Text = ({ children = '', style }) => (
+  export const H1Text = ({ children = '', style}) => (
     <Text style={[h1Styles.text, style]}>{children}</Text>
   );
 
@@ -41,7 +43,7 @@ const baseStyles = StyleSheet.create({
     },
   });
   
-  export const H2Text = ({ children = '', style }) => (
+  export const H2Text = ({ children = '', style}) => (
     <Text style={[h2Styles.text, style]}>{children}</Text>
   );
   
@@ -54,7 +56,7 @@ const baseStyles = StyleSheet.create({
     },
   });
   
-  export const H3Text = ({ children = '', style }) => (
+  export const H3Text = ({ children = '', style}) => (
     <Text style={[h3Styles.text, style]}>{children}</Text>
   );
 
@@ -68,7 +70,7 @@ const baseStyles = StyleSheet.create({
     },
   });
   
-  export const H4Text = ({ children, style }) => (
+  export const H4Text = ({ children, style}) => (
     <Text style={[h4Styles.text, style]}>{children}</Text>
   );
 
@@ -80,7 +82,7 @@ const baseStyles = StyleSheet.create({
     },
   });
   
-  export const H5Text = ({ children, style }) => (
+  export const H5Text = ({ children, style}) => (
     <Text style={[h5Styles.text, style]}>{children}</Text>
   );
   
@@ -92,7 +94,7 @@ const baseStyles = StyleSheet.create({
     },
   });
   
-  export const H6Text = ({ children, style }) => (
+  export const H6Text = ({ children, style}) => (
     <Text style={[h6Styles.text, style]}>{children}</Text>
   );
   export default Text;
