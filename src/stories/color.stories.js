@@ -22,14 +22,13 @@ const Colors = ({color , theme = 'light'}) => {
             <CircularContainer
               style={{ backgroundColor: color[each], margin: 20 }}
             />
-            <H4Text style={{ textAlign: "center" }} theme={theme}>{color[each]}</H4Text>
+            <H4Text style={{ textAlign: "center" , color : light.neutral7 }} >{color[each]}</H4Text>
           </View>
         );
       })}
     </MainContent>
   );
 };
-
 
 storiesOf('Colors', module)
 .add('Primary', () => <Colors color={primary}/>)
