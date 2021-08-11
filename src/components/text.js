@@ -1,7 +1,6 @@
 import React from 'react';
 import { Text as RNText, StyleSheet } from 'react-native';
 import {font} from './style';
-import {light , dark} from './themeColor';
 import './font';
 
 // Base Text
@@ -11,18 +10,12 @@ const baseStyles = StyleSheet.create({
       fontSize: font.sizeBase,
       lineHeight: font.lineHeightBase,
       zIndex: 1,
-    },
-    light : {
-      color : light.black
-    },
-    dark : {
-      color : dark.white
     }
   });
   
-  export const Text = ({ children, style, theme, ...props }) => (
+  export const Text = ({ children, style, ...props }) => (
     <RNText 
-      style={[baseStyles.text, style , theme === 'dark' ? baseStyles.dark : baseStyles.light]}
+      style={[baseStyles.text, style]}
       {...props}>
       {children}
     </RNText>
@@ -37,8 +30,8 @@ const baseStyles = StyleSheet.create({
     },
   });
   
-  export const H1Text = ({ children = '', style ,theme='light'}) => (
-    <Text style={[h1Styles.text, style]} theme={theme}>{children}</Text>
+  export const H1Text = ({ children = '', style}) => (
+    <Text style={[h1Styles.text, style]}>{children}</Text>
   );
 
   // H2 Text
@@ -50,8 +43,8 @@ const baseStyles = StyleSheet.create({
     },
   });
   
-  export const H2Text = ({ children = '', style, theme='light' }) => (
-    <Text style={[h2Styles.text, style]} theme={theme}>{children}</Text>
+  export const H2Text = ({ children = '', style}) => (
+    <Text style={[h2Styles.text, style]}>{children}</Text>
   );
   
   // H3 Text
@@ -63,8 +56,8 @@ const baseStyles = StyleSheet.create({
     },
   });
   
-  export const H3Text = ({ children = '', style, theme='light' }) => (
-    <Text style={[h3Styles.text, style]} theme={theme}>{children}</Text>
+  export const H3Text = ({ children = '', style}) => (
+    <Text style={[h3Styles.text, style]}>{children}</Text>
   );
 
   // H4 Text
@@ -77,8 +70,8 @@ const baseStyles = StyleSheet.create({
     },
   });
   
-  export const H4Text = ({ children, style, theme='light' }) => (
-    <Text style={[h4Styles.text, style]} theme={theme}>{children}</Text>
+  export const H4Text = ({ children, style}) => (
+    <Text style={[h4Styles.text, style]}>{children}</Text>
   );
 
   const h5Styles = StyleSheet.create({
@@ -89,8 +82,8 @@ const baseStyles = StyleSheet.create({
     },
   });
   
-  export const H5Text = ({ children, style, theme='light' }) => (
-    <Text style={[h5Styles.text, style]} theme={theme}>{children}</Text>
+  export const H5Text = ({ children, style}) => (
+    <Text style={[h5Styles.text, style]}>{children}</Text>
   );
   
   const h6Styles = StyleSheet.create({
@@ -101,8 +94,8 @@ const baseStyles = StyleSheet.create({
     },
   });
   
-  export const H6Text = ({ children, style, theme='light' }) => (
-    <Text style={[h6Styles.text, style]} theme={theme}>{children}</Text>
+  export const H6Text = ({ children, style}) => (
+    <Text style={[h6Styles.text, style]}>{children}</Text>
   );
   export default Text;
  
