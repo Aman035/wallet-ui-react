@@ -56,25 +56,24 @@ const Simplified_Home2 = () => (
       <SmallBalanceLabel style={styles.smallabel}>$41,328.9</SmallBalanceLabel>
       <View style={{ flexDirection: "row" }}>
         <IconButton style={styles.button}>
-          <ArrowUpIcon />
+          <ArrowUpIcon color="#000"/>
           <H4Text style={styles.btntext}>Send</H4Text>
         </IconButton>
         <IconButton style={styles.button}>
-          <ArrowDownIcon />
+          <ArrowDownIcon color="#000"/>
           <H4Text style={styles.btntext}>Receive</H4Text>
         </IconButton>
       </View>
       <View style={{ flexDirection: "row", padding: 30 }}>
         <View style={{ flex: 3 }}>
-          <H3Text>Set A recovery email and sleep peacefully.</H3Text>
+          <H3Text>Set A recovery email and sleep peacefully. </H3Text>
         </View>
-        <IconButton>
-          <ArrowRightIcon />
-        </IconButton>
+        <ArrowRightIcon color="#000"/>
+        
       </View>
     </MainContent>
     <Footer>
-      Receiving <BitcoinIcon height={20} />
+      Receiving <BitcoinIcon color="#000" />
       1.6240 2785
     </Footer>
   </MainContent>

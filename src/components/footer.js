@@ -12,7 +12,7 @@ const styles = StyleSheet.create({
 })
 const Footer = ({children})=>(
      <View style={styles.container}>
-         <CaretUpIcon/>
+         <CaretUpIcon color="#000"/>
          <H3Text>{children}</H3Text>
      </View>
 );

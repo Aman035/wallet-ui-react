@@ -5,6 +5,7 @@
  */
 
  import { extendObservable } from 'mobx';
+ import { light, primary } from './components/themeColor';
 
  export class Store {
    constructor() {
@@ -17,7 +18,11 @@
          resetPinNew: '',
          resetPinVerify: '',
        },
-       theme : 'light'
+       theme : {
+         type : 'light',
+         primary : primary,
+         color : light
+       }
      });
    }
  

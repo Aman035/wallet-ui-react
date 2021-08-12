@@ -53,11 +53,11 @@ const Simplified_Home = () => (
       <SmallBalanceLabel style={styles.smallabel}>$41,328.9</SmallBalanceLabel>
       <View style={{ flexDirection: "row" }}>
         <IconButton style={styles.button}>
-          <ArrowUpIcon />
+          <ArrowUpIcon color="#000"/>
           <H4Text style={styles.btntext}>Send</H4Text>
         </IconButton>
         <IconButton style={styles.button}>
-          <ArrowDownIcon />
+          <ArrowDownIcon color="#000"/>
           <H4Text style={styles.btntext}>Receive</H4Text>
         </IconButton>
       </View>

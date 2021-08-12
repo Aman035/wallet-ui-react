@@ -32,10 +32,10 @@ Header.propTypes = {
 };
 
 export const Setting_Header = () => (
-  <Header style = {styles.settingHeader}><IconButton><SettingsIcon height={25} width={25}/></IconButton></Header>
+  <Header style = {styles.settingHeader}><IconButton><SettingsIcon height={25} width={25} color="#000"/></IconButton></Header>
 )
 
 export const Back_Header = () => (
-  <Header style = {styles.backHeader}><H3Text><CaretLeft height={20} width={25}/>Back</H3Text></Header>
+  <Header style = {styles.backHeader}><H3Text><CaretLeft height={20} width={25} color="#000"/>Back</H3Text></Header>
 )
 export default Header;
