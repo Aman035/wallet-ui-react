@@ -11,13 +11,15 @@ import MultiSig_Home from '../view/multisig_home';
 import Simplified_Home2 from '../view/simplified_home2';
 import { Store } from '../store';
 import Auth from '../action/auth';
+import ThemeAction from '../action/theme';
 
 const store = new Store();
 store.init();
 const auth = new Auth(store);
+const theme = new ThemeAction(store);
 
 storiesOf('Screens', module)
-.add('Cover', () => <Cover/>)
+.add('Cover', () => <Cover store = {store}/>)
 .add('Choose Pin', () => (<ChoosePin store={store} auth={auth}/>))
 .add('Confirm Pin' , () => (<ConfirmPin store={store} auth={auth}/>))
 .add('Login Pin' , () => (<LoginPin store={store} auth={auth}/>))
