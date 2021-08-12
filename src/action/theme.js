@@ -15,7 +15,9 @@
     */
    changeTheme(theme) {
         if(theme === 'dark' || theme === 'light' || theme === 'user')
-        this._store.theme = theme;
+        {
+          this._store.theme = theme;
+        }
    }
 }
  export default ThemeAction;

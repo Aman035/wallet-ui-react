@@ -16,7 +16,7 @@ const styles = StyleSheet.create({
   container: {
     justifyContent: "center",
     alignItems: "center",
-    paddingBottom: 20,
+    paddingBottom: 20
   },
   button: {
     borderColor: color.neutral3,

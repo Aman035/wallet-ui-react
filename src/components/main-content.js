@@ -8,15 +8,9 @@ const styles = StyleSheet.create({
     flexGrow: 1,
     alignItems: "center",
   },
-
-  //Theme Styles
-  dark: {
-    backgroundColor: dark.black,
-  },
-
-  light: {
-    backgroundColor: light.white,
-  },
+  dark : {
+    backgroundColor : dark.black
+  }
 });
 
 const MainContent = ({ children, style, theme = "light" }) => (
@@ -24,7 +18,7 @@ const MainContent = ({ children, style, theme = "light" }) => (
     contentContainerStyle={[
       styles.content,
       style,
-      theme === "dark" ? styles.dark : styles.light,
+      theme === "dark" ? styles.dark : null,
     ]}
   >
     {children}
