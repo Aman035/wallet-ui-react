@@ -12,46 +12,6 @@
    // PIN actions
  
    /**
-    * Initialize the set pin view by resetting input values
-    * and then navigating to the view.
-    * @return {undefined}
-    */
-   initSetPin() {
-     this._store.auth.newPin = '';
-     this._store.auth.pinVerify = '';
-   }
- 
-   /**
-    * Initialize the pin view by resetting input values
-    * and then navigating to the view.
-    * @return {undefined}
-    */
-   initPin() {
-     this._store.auth.pin = '';
-   }
- 
-   /**
-    * Initialize the reset pin flow by resetting input values
-    * and then navigating to the view.
-    * @return {undefined}
-    */
-   initResetPin() {
-     this._store.auth.resetPinCurrent = '';
-     this._store.auth.resetPinNew = '';
-     this._store.auth.resetPinVerify = '';
-   }
- 
-   /**
-    * Initialize the reset new pin flow by resetting new values
-    * and then navigating to the new pin view.
-    * @return {undefined}
-    */
-   initResetPinNew() {
-     this._store.auth.resetPinNew = '';
-     this._store.auth.resetPinVerify = '';
-   }
- 
-   /**
     * Append a digit input to the pin parameter.
     * @param  {string} options.digit The digit to append to the pin
     * @param  {string} options.param The pin parameter name

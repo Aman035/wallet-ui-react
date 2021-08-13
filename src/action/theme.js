@@ -1,6 +1,7 @@
 /**
  * @fileOverview action to handle the overall theme of components
  */
+ import {light , dark} from '../components/themeColor';
 
  class ThemeAction {
    constructor(store) {
