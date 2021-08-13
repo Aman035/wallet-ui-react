@@ -1,11 +1,18 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 import MainContent from '../components/main-content';
-import {BalanceLabel , BalanceLabelNumeral ,SmallBalanceLabel} from '../components/label';
-import {color} from '../components/style';
+import {
+  BalanceLabel,
+  BalanceLabelNumeral,
+  SmallBalanceLabel,
+} from '../components/label';
+import { color } from '../components/style';
+
 storiesOf('Label', module)
-  .addDecorator(story => (
-      <MainContent style={{ justifyContent: 'center',padding : 10 }}>{story()}</MainContent>
+  .addDecorator((story) => (
+    <MainContent style={{ justifyContent: 'center', padding: 10 }}>
+      {story()}
+    </MainContent>
   ))
   .add('Bitcoin Balance', () => (
     <BalanceLabel>

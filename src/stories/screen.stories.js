@@ -19,12 +19,12 @@ const auth = new Auth(store);
 const theme = new ThemeAction(store);
 
 storiesOf('Screens', module)
-.add('Cover', () => <Cover store = {store}/>)
-.add('Choose Pin', () => (<ChoosePin store={store} auth={auth}/>))
-.add('Confirm Pin' , () => (<ConfirmPin store={store} auth={auth}/>))
-.add('Login Pin' , () => (<LoginPin store={store} auth={auth}/>))
-.add('Loading' , () => (<Loading/>))
-.add('Home', () => (<Home1/>))
-.add('Simplified Home' , () => <Simplified_Home/>)
-.add('MultiSig Home' , () => <MultiSig_Home/>)
-.add('Simplified Home2' , () => <Simplified_Home2/>)
+  .add('Cover', () => <Cover store={store} />)
+  .add('Choose Pin', () => <ChoosePin store={store} auth={auth} />)
+  .add('Confirm Pin', () => <ConfirmPin store={store} auth={auth} />)
+  .add('Login Pin', () => <LoginPin store={store} auth={auth} />)
+  .add('Loading', () => <Loading />)
+  .add('Home', () => <Home1 />)
+  .add('Simplified Home', () => <Simplified_Home />)
+  .add('MultiSig Home', () => <MultiSig_Home />)
+  .add('Simplified Home2', () => <Simplified_Home2 />);
