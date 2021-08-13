@@ -1,5 +1,5 @@
 import React from 'react';
-import {TouchableOpacity,StyleSheet,ViewPropTypes} from 'react-native';
+import { TouchableOpacity, StyleSheet, ViewPropTypes } from 'react-native';
 import PropTypes from 'prop-types';
 import { H3Text } from './text';
 import { color } from './style';
@@ -9,7 +9,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     minHeight: 60,
-    minWidth: 60
+    minWidth: 60,
   },
 });
 
@@ -34,44 +34,44 @@ const styles2 = StyleSheet.create({
   touchable: {
     justifyContent: 'center',
     alignItems: 'center',
-    alignSelf : 'stretch',
+    alignSelf: 'stretch',
     minHeight: 60,
     minWidth: 60,
-    borderRadius : '5px'
+    borderRadius: '5px',
   },
-  touchable_small : {
+  touchable_small: {
     justifyContent: 'center',
     alignItems: 'center',
-    alignSelf : 'stretch',
+    alignSelf: 'stretch',
     minHeight: 45,
-    minWidth : 40,
-    borderRadius : '5px'
-  }
+    minWidth: 40,
+    borderRadius: '5px',
+  },
 });
 
-export const Button2 = ({ onPress, disabled, children='Btn Text',style}) => (
+export const Button2 = ({ onPress, disabled, children, style }) => (
   <TouchableOpacity
-    style={[{ opacity: disabled ? 0.5 : 1 }, styles2.touchable , style]}
+    style={[{ opacity: disabled ? 0.5 : 1 }, styles2.touchable, style]}
     disabled={disabled}
     onPress={onPress}
   >
-    <H3Text style={{color : color.white}}>{children}</H3Text>
+    {children}
   </TouchableOpacity>
 );
 
 Button2.propTypes = {
   onPress: PropTypes.func.isRequired,
   disabled: PropTypes.bool,
-  children: PropTypes.string,
+  children: PropTypes.node,
 };
 
-export const Button2_Small = ({ onPress, disabled, children,style}) => (
+export const Button2_Small = ({ onPress, disabled, children, style }) => (
   <TouchableOpacity
-    style={[{ opacity: disabled ? 0.5 : 1 }, styles2.touchable_small , style]}
+    style={[{ opacity: disabled ? 0.5 : 1 }, styles2.touchable_small, style]}
     disabled={disabled}
     onPress={onPress}
   >
-    <H3Text style={{color : color.white}}>{children}</H3Text>
+    <H3Text style={{ color: color.white }}>{children}</H3Text>
   </TouchableOpacity>
 );
 
@@ -80,7 +80,7 @@ Button2_Small.propTypes = {
   disabled: PropTypes.bool,
 };
 
-export const IconButton = ({ onPress, disabled, style , children }) => (
+export const IconButton = ({ onPress, disabled, style, children }) => (
   <Button onPress={onPress} disabled={disabled} style={style}>
     {children}
   </Button>
@@ -90,6 +90,6 @@ IconButton.propTypes = {
   onPress: PropTypes.func,
   disabled: PropTypes.bool,
   style: ViewPropTypes.style,
-  children : PropTypes.node
+  children: PropTypes.node,
 };
 export default Button;
