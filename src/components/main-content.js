@@ -9,7 +9,7 @@ const styles = StyleSheet.create({
     alignItems: "center",
   },
   dark : {
-    backgroundColor : dark.black
+    backgroundColor : dark.fill
   }
 });
 

@@ -25,6 +25,9 @@ const Cover = ({ store }) => {
     text: {
       color: store.theme.color.stroke,
     },
+    btnText : {
+      color : store.theme.color.fill
+    }
   });
 
   return (
@@ -35,7 +38,7 @@ const Cover = ({ store }) => {
         <H3Text style={styles.text}>Rest in peace.</H3Text>
       </View>
       <Button2 style={styles.btn} onPress={() => {}}>
-        <H3Text style={styles.heading}>Make my bed</H3Text>
+        <H3Text style={styles.btnText}>Make my bed</H3Text>
       </Button2>
     </MainContent>
   );

@@ -4,31 +4,29 @@
  * in react components or used as a basis for computed values.
  */
 
- import { extendObservable } from 'mobx';
- import { light, primary } from './components/themeColor';
+import { extendObservable } from 'mobx';
+import { primary, dark } from './components/themeColor';
 
- export class Store {
-   constructor() {
-     extendObservable(this, {
-       auth: {
-         pin: '',
-         newPin: '',
-         pinVerify: '',
-         resetPinCurrent: '',
-         resetPinNew: '',
-         resetPinVerify: '',
-       },
-       theme : {
-         type : 'light',
-         primary : primary,
-         color : light
-       }
-     });
-   }
- 
-   init() {
-   }
- }
- 
- export default new Store();
- 
+export class Store {
+  constructor() {
+    extendObservable(this, {
+      auth: {
+        pin: '',
+        newPin: '',
+        pinVerify: '',
+        resetPinCurrent: '',
+        resetPinNew: '',
+        resetPinVerify: '',
+      },
+      theme: {
+        type: 'dark',
+        primary: primary,
+        color: dark,
+      },
+    });
+  }
+  
+  init() {}
+}
+
+export default new Store();
