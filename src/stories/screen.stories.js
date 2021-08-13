@@ -9,6 +9,7 @@ import Home1 from '../view/home1';
 import Simplified_Home from '../view/simplified_home';
 import MultiSig_Home from '../view/multisig_home';
 import Simplified_Home2 from '../view/simplified_home2';
+import Theme_Changer from '../view/theme_changer';
 import { Store } from '../store';
 import Auth from '../action/auth';
 import ThemeAction from '../action/theme';
@@ -19,6 +20,7 @@ const auth = new Auth(store);
 const theme = new ThemeAction(store);
 
 storiesOf('Screens', module)
+  .add('Theme Changer', () => <Theme_Changer store = {store} theme = {theme} />)
   .add('Cover', () => <Cover store={store} />)
   .add('Choose Pin', () => <ChoosePin store={store} auth={auth} />)
   .add('Confirm Pin', () => <ConfirmPin store={store} auth={auth} />)
