@@ -5,8 +5,8 @@ import PropTypes from 'prop-types';
 import SettingsIcon from '../assets/icon/outline/Gear';
 import CaretLeft from '../assets/icon/filled/CaretLeft';
 import { IconButton } from './button';
-// Header
 
+// Header
 const styles = StyleSheet.create({
     header: {
       minHeight: 75,
@@ -31,11 +31,11 @@ Header.propTypes = {
   children: PropTypes.node,
 };
 
-export const Setting_Header = () => (
-  <Header style = {styles.settingHeader}><IconButton><SettingsIcon height={25} width={25} color="#000"/></IconButton></Header>
+export const Setting_Header = ({color}) => (
+  <Header style = {styles.settingHeader}><IconButton><SettingsIcon height={30} width={30} color={color}/></IconButton></Header>
 )
 
-export const Back_Header = () => (
-  <Header style = {styles.backHeader}><H3Text><CaretLeft height={20} width={25} color="#000"/>Back</H3Text></Header>
+export const Back_Header = ({color}) => (
+  <Header style = {styles.backHeader}><H3Text style={{color : {color}}}><CaretLeft height={20} width={25} color={color}/>Back</H3Text></Header>
 )
 export default Header;
