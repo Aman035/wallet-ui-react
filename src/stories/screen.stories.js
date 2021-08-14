@@ -26,7 +26,7 @@ storiesOf('Screens', module)
   .add('Confirm Pin', () => <ConfirmPin store={store} auth={auth} />)
   .add('Login Pin', () => <LoginPin store={store} auth={auth} />)
   .add('Loading', () => <Loading store={store} />)
-  .add('Home', () => <Home1 />)
-  .add('Simplified Home', () => <Simplified_Home />)
-  .add('MultiSig Home', () => <MultiSig_Home />)
-  .add('Simplified Home2', () => <Simplified_Home2 />);
+  .add('Home', () => <Home1 store={store} />)
+  .add('Simplified Home', () => <Simplified_Home store={store} />)
+  .add('MultiSig Home', () => <MultiSig_Home store={store} />)
+  .add('Simplified Home2', () => <Simplified_Home2 store={store} />);
