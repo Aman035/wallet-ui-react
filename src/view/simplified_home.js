@@ -7,21 +7,28 @@ import { BalanceLabel, BalanceLabelNumeral, SmallBalanceLabel } from "../compone
 import { IconButton } from "../components/button";
 import ArrowUpIcon from "../assets/icon/filled/ArrowUp";
 import ArrowDownIcon from "../assets/icon/filled/ArrowDown";
+import CarretUpIcon from '../assets/icon/filled/CaretUp';
 import BitcoinIcon from "../assets/icon/filled/Bitcoin";
 import { H3Text, H4Text } from "../components/text";
-import { color } from "../components/style";
 import Footer from "../components/footer";
 
 const Simplified_Home = ({store}) => {
   
+  const fill = store.theme.color.fill;
+  const stroke = store.theme.color.stroke;
+  const secondary = store.theme.color.neutral7;
+
   const styles = StyleSheet.create({
     container: {
-      backgroundColor : store.theme.color.fill
+      backgroundColor : fill
+    },
+    centerContainer : {
+      justifyContent : 'center'
     },
     button: {
-      borderColor: color.neutral3,
+      borderColor: secondary,
       borderRadius: 5,
-      borderWidth: 2,
+      borderWidth: 1.5,
       width: 120,
       height: 70,
       marginHorizontal: 8,
@@ -30,39 +37,45 @@ const Simplified_Home = ({store}) => {
       paddingVertical: 10,
     },
     smallabel: {
-      color: color.neutral7,
+      color: secondary,
       paddingBottom: 40,
     },
+    btnContainer : {
+      flexDirection: "row" 
+    },
     btntext: {
-      color: color.neutral7,
+      color: secondary,
       paddingTop: 5,
     },
+    text : {
+      color : stroke
+    }
+    
   });
 
   return(
   <MainContent style={styles.container}>
-    <Setting_Header color={store.theme.color.stroke}/>
-    <MainContent>
-      <SingleBedIcon height={60} width={60} color={store.theme.color.stroke}/>
+    <Setting_Header color={stroke}/>
+    <MainContent style={styles.centerContainer}>
+      <SingleBedIcon height={60} width={60} color={stroke}/>
       <BalanceLabel style={styles.label}>
         <BalanceLabelNumeral>
-          <H3Text><BitcoinIcon color={store.theme.color.stroke}/>1.6240 2785</H3Text>
-          
+          <H3Text style={styles.text}><BitcoinIcon color={stroke} height={20}/>1.6240 2785</H3Text>
         </BalanceLabelNumeral>
       </BalanceLabel>
       <SmallBalanceLabel style={styles.smallabel}>$41,328.9</SmallBalanceLabel>
-      <View style={{ flexDirection: "row" }}>
+      <View style={styles.btnContainer}>
         <IconButton style={styles.button}>
-          <ArrowUpIcon color={store.theme.color.stroke}/>
+          <ArrowUpIcon color={stroke}/>
           <H4Text style={styles.btntext}>Send</H4Text>
         </IconButton>
         <IconButton style={styles.button}>
-          <ArrowDownIcon color={store.theme.color.stroke}/>
+          <ArrowDownIcon color={stroke}/>
           <H4Text style={styles.btntext}>Receive</H4Text>
         </IconButton>
       </View>
     </MainContent>
-    <Footer>1 transaction today</Footer>
+    <Footer><CarretUpIcon color={stroke}/><H3Text style={styles.text}>1 transaction today</H3Text></Footer>
   </MainContent>
 )};
 
