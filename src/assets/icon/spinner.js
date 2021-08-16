@@ -3,11 +3,12 @@ import React from "react";
 function Spinner(props) {
   return (
     <svg
-      width="70"
-      height="70"
+      width="100"
+      height="100"
       display="block"
       preserveAspectRatio="xMidYMid"
       viewBox="0 0 100 100"
+      {...props}
     >
       <path fill="#dedede" d="M10 50a40 40 0 0080 0 40 42 0 01-80 0">
         <animateTransform

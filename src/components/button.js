@@ -40,12 +40,12 @@ const styles2 = StyleSheet.create({
     borderRadius: '5px',
   },
   touchable_small: {
-    justifyContent: 'center',
     alignItems: 'center',
     alignSelf: 'stretch',
     minHeight: 45,
     minWidth: 40,
     borderRadius: '5px',
+    padding : 10
   },
 });
 
@@ -71,13 +71,14 @@ export const Button2_Small = ({ onPress, disabled, children, style }) => (
     disabled={disabled}
     onPress={onPress}
   >
-    <H3Text style={{ color: color.white }}>{children}</H3Text>
+    {children}
   </TouchableOpacity>
 );
 
 Button2_Small.propTypes = {
   onPress: PropTypes.func.isRequired,
   disabled: PropTypes.bool,
+  children : PropTypes.node
 };
 
 export const IconButton = ({ onPress, disabled, style, children }) => (
