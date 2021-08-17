@@ -1,6 +1,6 @@
 import React from 'react';
-import { View, StyleSheet, Text } from 'react-native';
-import SingleBedIcon from '../assets/icon/single_bed';
+import { View, StyleSheet} from 'react-native';
+import SingleBedIcon from '../assets/icon/myMattress/singleBed';
 import { Setting_Header } from '../components/header';
 import MainContent from '../components/main-content';
 import {

@@ -3,6 +3,7 @@
  * Taken According to Bitcoin Wallet Design Kit
  */
 
+//Primary Colors
 export const primary = {
     bitcoin_orange : '#F7931A',
     bitcoin_blue : '#1C376B',
@@ -12,6 +13,7 @@ export const primary = {
     purple : '#BB6BD9'
 }
 
+//Light Theme Colors
 export const light = {
     fill : '#FFFFFF',
     neutral1 : '#F8F8F8' ,
@@ -25,6 +27,7 @@ export const light = {
     stroke : '#000000'
 }
 
+//Dark Theme Colors
 export const dark = {
     fill : '#000000',
     neutral1 : '#1A1A1A' ,
@@ -38,7 +41,7 @@ export const dark = {
     stroke : '#FFFFFF'
 }
 
-//initialy same as light 
+//User Defined Colors - initialy same as light 
 export const user = {
     fill : '#FFFFFF',
     neutral1 : '#F8F8F8' ,

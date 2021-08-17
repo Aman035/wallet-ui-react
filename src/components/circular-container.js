@@ -1,12 +1,12 @@
-import React from "react";
-import { View, StyleSheet, ViewPropTypes } from "react-native";
-import PropTypes from "prop-types";
+import React from 'react';
+import { View, StyleSheet, ViewPropTypes } from 'react-native';
+import PropTypes from 'prop-types';
 
 const styles = StyleSheet.create({
   container: {
     height: 60,
     width: 60,
-    borderRadius: "100%",
+    borderRadius: '100%',
   },
 });
 

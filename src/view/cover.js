@@ -1,16 +1,14 @@
-import React from "react";
-import { Button2 } from "../components/button";
-import { View, StyleSheet } from "react-native";
-import MattressLogo from "../assets/icon/myMattress/Logo";
-import { H5Text, H3Text } from "../components/text";
-import { color } from "../components/style";
-import MainContent from "../components/main-content";
-import { observer } from "mobx-react";
+import React from 'react';
+import { Button2 } from '../components/button';
+import { View, StyleSheet } from 'react-native';
+import MattressLogo from '../assets/icon/myMattress/Logo';
+import { H5Text, H3Text } from '../components/text';
+import MainContent from '../components/main-content';
 
 const Cover = ({ store }) => {
   const styles = StyleSheet.create({
     container: {
-      alignItems: "center",
+      alignItems: 'center',
       padding: 20,
       backgroundColor: store.theme.color.fill,
     },
@@ -18,16 +16,16 @@ const Cover = ({ store }) => {
       paddingVertical: 20,
     },
     btn: {
-      backgroundColor: color.bitcoin_blue,
-      marginTop: "auto",
+      backgroundColor: store.theme.primary.bitcoin_blue,
+      marginTop: 'auto',
       marginBottom: 20,
     },
     text: {
       color: store.theme.color.stroke,
     },
-    btnText : {
-      color : store.theme.color.fill
-    }
+    btnText: {
+      color: store.theme.color.fill,
+    },
   });
 
   return (
@@ -44,4 +42,4 @@ const Cover = ({ store }) => {
   );
 };
 
-export default observer(Cover);
+export default Cover;

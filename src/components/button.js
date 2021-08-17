@@ -1,8 +1,6 @@
 import React from 'react';
 import { TouchableOpacity, StyleSheet, ViewPropTypes } from 'react-native';
 import PropTypes from 'prop-types';
-import { H3Text } from './text';
-import { color } from './style';
 
 const styles = StyleSheet.create({
   touchable: {
@@ -45,7 +43,7 @@ const styles2 = StyleSheet.create({
     minHeight: 45,
     minWidth: 40,
     borderRadius: '5px',
-    padding : 10
+    padding: 10,
   },
 });
 
@@ -78,7 +76,7 @@ export const Button2_Small = ({ onPress, disabled, children, style }) => (
 Button2_Small.propTypes = {
   onPress: PropTypes.func.isRequired,
   disabled: PropTypes.bool,
-  children : PropTypes.node
+  children: PropTypes.node,
 };
 
 export const IconButton = ({ onPress, disabled, style, children }) => (
@@ -93,4 +91,5 @@ IconButton.propTypes = {
   style: ViewPropTypes.style,
   children: PropTypes.node,
 };
+
 export default Button;

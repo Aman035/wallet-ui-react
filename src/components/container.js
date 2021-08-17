@@ -7,16 +7,10 @@ const styles = StyleSheet.create({
     height: '100vh',
     width: '100vw',
   },
-  dark : {
-    backgroundColor : '#000'
-  }
 });
 
-const Container = ({ children, style , theme = 'light' }) => (
-  <View 
-    style={[styles.container, style , theme==='dark'? styles.dark : null ]}>
-      {children}
-  </View>
+const Container = ({ children, style }) => (
+  <View style={[styles.container, style]}>{children}</View>
 );
 
 Container.propTypes = {

@@ -12,11 +12,14 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     flexWrap: 'wrap',
   },
+  dark : {
+    backgroundColor : '#000'
+  }
 });
 
 const Colors = ({ color, theme = 'light' }) => {
   return (
-    <MainContent style={styles.container} theme={theme}>
+    <MainContent style={[styles.container, theme==='dark'?styles.dark : null]}>
       {Object.keys(color).map((each, i) => {
         return (
           <View key={i} style={{ marginVertical: 20 }}>
