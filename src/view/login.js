@@ -1,6 +1,5 @@
 import React from 'react';
 import { View, StyleSheet } from 'react-native';
-import { observer } from 'mobx-react';
 import MainContent from '../components/main-content';
 import { H3Text, H6Text } from '../components/text';
 import { PinSecret, PinPad } from '../components/pin';
@@ -45,4 +44,4 @@ const LoginPin = ({ store, auth }) => {
   );
 };
 
-export default observer(LoginPin);
+export default LoginPin;

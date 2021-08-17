@@ -9,6 +9,6 @@ storiesOf('Pin', module)
     <MainContent style={{ justifyContent: 'center' }}>{story()}</MainContent>
   ))
   .add('Pin Pad', () => (
-    <PinPad onInput={action('input digit')} onBackspace={action('backspace')} />
+    <PinPad onInput={action('input digit')} onBackspace={action('backspace')} stroke='#000' secondary='#777777'/>
   ))
   .add('Pin Secret', () => <PinSecret pin="12" />);

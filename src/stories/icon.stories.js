@@ -26,6 +26,9 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
+  dark: {
+    backgroundColor: '#000',
+  },
 });
 
 const Container = ({
@@ -35,7 +38,9 @@ const Container = ({
   width = '40',
   fill = 'none',
 }) => (
-  <MainContent theme={theme} style={styles.container}>
+  <MainContent
+    style={[styles.container, theme === 'dark' ? styles.dark : null]}
+  >
     {icons.map((Each, i) => (
       <View key={i} style={styles.icon}>
         <Each
@@ -72,7 +77,7 @@ storiesOf('Icons/Mattress', module)
     </MainContent>
   ))
   .add('Logo Dark', () => (
-    <MainContent theme="dark" style={{ justifyContent: 'center' }}>
+    <MainContent style={{ justifyContent: 'center', backgroundColor: '#000' }}>
       <MatressLogo color="#fff" />
     </MainContent>
   ));

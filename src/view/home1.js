@@ -2,7 +2,6 @@ import React from 'react';
 import { StyleSheet } from 'react-native';
 import MainContent from '../components/main-content';
 import { H6Text, H3Text } from '../components/text';
-import { color } from '../components/style';
 import { Button2_Small } from '../components/button';
 import RightArrowIcon from '../assets/icon/filled/ArrowRight';
 import { Setting_Header } from '../components/header';
@@ -30,14 +29,13 @@ export const Home1 = ({ store }) => {
       color: store.theme.color.stroke,
     },
     heading2: {
-      color: color.grey,
       marginVertical: 15,
       textAlign: 'center',
       paddingHorizontal: 50,
       color: store.theme.color.neutral7,
     },
     button: {
-      backgroundColor: color.bitcoin_blue,
+      backgroundColor: store.theme.primary.bitcoin_blue,
       width: '50%',
       marginHorizontal: 'auto',
       marginTop: 25,

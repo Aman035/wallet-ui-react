@@ -1,24 +1,19 @@
 import React from "react";
 import { ScrollView, StyleSheet } from "react-native";
 import PropTypes from "prop-types";
-import { dark, light } from "./themeColor";
 
 const styles = StyleSheet.create({
   content: {
     flexGrow: 1,
     alignItems: "center",
-  },
-  dark : {
-    backgroundColor : dark.fill
   }
 });
 
-const MainContent = ({ children, style, theme = "light" }) => (
+const MainContent = ({ children, style }) => (
   <ScrollView
     contentContainerStyle={[
       styles.content,
-      style,
-      theme === "dark" ? styles.dark : null,
+      style
     ]}
   >
     {children}

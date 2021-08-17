@@ -1,16 +1,16 @@
-import React from "react";
-import { View, Text as RNText, StyleSheet, ViewPropTypes } from "react-native";
-import PropTypes from "prop-types";
-import Text from "./text";
-import { font } from "./style";
+import React from 'react';
+import { View, Text as RNText, StyleSheet, ViewPropTypes } from 'react-native';
+import PropTypes from 'prop-types';
+import Text from './text';
+import { font } from './style';
 
 // Balance Label
 const balanceStyles = StyleSheet.create({
   label: {
-    flexDirection: "row",
+    flexDirection: 'row',
   },
   numeral: {
-    fontFamily: "Inter Regular",
+    fontFamily: 'Inter Regular',
     fontSize: font.sizeL,
     lineHeight: null,
     letterSpacing: 1,
@@ -45,10 +45,10 @@ BalanceLabelNumeral.propTypes = {
 // Small Balance Label
 const smallBalanceStyles = StyleSheet.create({
   label: {
-    flexDirection: "row",
+    flexDirection: 'row',
   },
   numeral: {
-    fontFamily: "Inter Regular",
+    fontFamily: 'Inter Regular',
     fontSize: font.sizeBase,
     lineHeight: font.lineHeightBase,
     letterSpacing: 1,
