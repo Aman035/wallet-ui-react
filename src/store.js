@@ -6,6 +6,7 @@
 
 import { extendObservable } from 'mobx';
 import { primary, dark } from './components/themeColor';
+import ComputedTransaction from './computed/transaction';
 
 export class Store {
   constructor() {
@@ -23,10 +24,13 @@ export class Store {
         primary: primary,
         color: dark,
       },
+      transactions : []
     });
   }
 
-  init() {}
+  init() {
+    ComputedTransaction(this);
+  }
 }
 
 export default new Store();
