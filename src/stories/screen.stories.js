@@ -10,14 +10,22 @@ import Simplified_Home from '../view/simplified_home';
 import MultiSig_Home from '../view/multisig_home';
 import Simplified_Home2 from '../view/simplified_home2';
 import Theme_Changer from '../view/theme_changer';
+import Transaction from '../view/transaction';
+import Receive from '../view/receive';
 import { Store } from '../store';
 import Auth from '../action/auth';
 import ThemeAction from '../action/theme';
+import ExchangeAction from '../action/exchange'; 
+import TransactionAction from '../action/transaction';
 
 const store = new Store();
 store.init();
 const auth = new Auth(store);
 const theme = new ThemeAction(store);
+const exchange = new ExchangeAction(store);
+exchange.init();
+const transactions = new TransactionAction(store);
+transactions.init();
 
 storiesOf('Screens', module)
   .add('Theme Changer', () => <Theme_Changer store = {store} theme = {theme} />)
@@ -29,4 +37,6 @@ storiesOf('Screens', module)
   .add('Home', () => <Home1 store={store} />)
   .add('Simplified Home', () => <Simplified_Home store={store} />)
   .add('MultiSig Home', () => <MultiSig_Home store={store} />)
-  .add('Simplified Home2', () => <Simplified_Home2 store={store} />);
+  .add('Simplified Home2', () => <Simplified_Home2 store={store} />)
+  .add('Transaction', () => <Transaction store={store} />)
+  .add('Receive', () => <Receive store={store} />);

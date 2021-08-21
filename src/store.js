@@ -23,10 +23,15 @@ export class Store {
         primary: primary,
         color: dark,
       },
+      transactions : [],
+      exchangeRate : {},
+      defaultUnit  : 'btc',
+      defaultFiat : 'eur',
     });
   }
 
-  init() {}
+  init() {
+  }
 }
 
 export default new Store();

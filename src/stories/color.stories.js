@@ -2,7 +2,7 @@ import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { View, StyleSheet } from 'react-native';
 import MainContent from '../components/main-content';
-import CircularContainer from '../components/circular-container';
+import {CircularContainer} from '../components/container';
 import { H4Text } from '../components/text';
 import { primary, light, dark } from '../components/themeColor';
 
