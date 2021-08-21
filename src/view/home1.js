@@ -5,7 +5,7 @@ import { H6Text, H3Text } from '../components/text';
 import { Button2_Small } from '../components/button';
 import RightArrowIcon from '../assets/icon/filled/ArrowRight';
 import { Setting_Header } from '../components/header';
-import CircularContainer from '../components/circular-container';
+import { CircularContainer } from '../components/container';
 import CheckIcon from '../assets/icon/filled/Check';
 
 export const Home1 = ({ store }) => {

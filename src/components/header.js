@@ -28,18 +28,18 @@ Header.propTypes = {
   children: PropTypes.node,
 };
 
-export const Setting_Header = ({ color }) => (
-  <Header style={styles.settingHeader}>
+export const Setting_Header = ({ color, style }) => (
+  <Header style={[styles.settingHeader, style]}>
     <IconButton>
       <SettingsIcon height={30} width={30} color={color} />
     </IconButton>
   </Header>
 );
 
-export const Back_Header = ({ color }) => (
-  <Header style={styles.backHeader}>
-    <H3Text style={{ color: { color } }}>
-      <CaretLeft height={20} width={25} color={color} />
+export const Back_Header = ({ color, style }) => (
+  <Header style={[styles.backHeader, style]}>
+    <H3Text style={{ color: color }}>
+      <CaretLeft height={20} width={22} viewBox="0 0 20 20" color={color} />
       Back
     </H3Text>
   </Header>

@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 const styles = StyleSheet.create({
   container: {
     alignItems: 'center',
-    paddingBottom: 20,
+    padding: 20,
   },
 });
 
