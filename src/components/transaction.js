@@ -1,6 +1,6 @@
 import React from 'react';
 import { View, StyleSheet, Image } from 'react-native';
-import { font } from './style';
+import BitcoinIcon from '../assets/icon/filled/Bitcoin';
 import { H3Text, H4Text } from './text';
 import { primary } from './themeColor';
 
@@ -60,6 +60,7 @@ const Transaction = ({ type, btc, time, amt, style, colors }) => {
             (type === 'Received' || type === 'Receiving...') ? styles.recText : styles.text
           }
         >
+          <BitcoinIcon color={colors.stroke} height={20}/>
           {btc}
         </H3Text>
         <H4Text style={styles.secText}>{amt}</H4Text>
