@@ -14,12 +14,12 @@ const pinEntryStyles = StyleSheet.create({
   },
 });
 
-export const PinSecret = ({ pin, style, stroke }) => (
+export const PinSecret = ({ pin, style, stroke, secondary , border }) => (
   <View style={[pinEntryStyles.wrapper, style]}>
-    <PinBubble pin_num={pin[0]} stroke={stroke} />
-    <PinBubble pin_num={pin[1]} stroke={stroke} />
-    <PinBubble pin_num={pin[2]} stroke={stroke} />
-    <PinBubble pin_num={pin[3]} stroke={stroke} />
+    <PinBubble pin_num={pin[0]} stroke={stroke} secondary={secondary} border={border} />
+    <PinBubble pin_num={pin[1]} stroke={stroke} secondary={secondary} border={border} />
+    <PinBubble pin_num={pin[2]} stroke={stroke} secondary={secondary} border={border} />
+    <PinBubble pin_num={pin[3]} stroke={stroke} secondary={secondary} border={border} />
   </View>
 );
 
@@ -30,24 +30,27 @@ PinSecret.propTypes = {
 
 // Pin Bubble
 
-const PinBubble = ({ pin_num, stroke }) => {
+export const PinBubble = ({ pin_num, stroke,secondary,border,style }) => {
   const bubbleStyles = StyleSheet.create({
     bubble: {
       margin: 4.5,
       height: 20,
       width: 20,
       borderRadius: '100%',
-      borderColor: stroke,
+      borderColor: border,
       borderStyle: 'solid',
       borderWidth: 2.5,
     },
     filled: {
       backgroundColor: stroke,
     },
+    filledSec : {
+      backgroundColor : secondary
+    }
   });
 
   return (
-    <View style={[bubbleStyles.bubble, pin_num ? bubbleStyles.filled : null]} />
+    <View style={[bubbleStyles.bubble, pin_num ? bubbleStyles.filled :bubbleStyles.filledSec,style]} />
   );
 };
 
