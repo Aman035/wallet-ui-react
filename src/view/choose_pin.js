@@ -34,7 +34,7 @@ const ChoosePin = ({ store, auth }) => {
       <H6Text style={styles.title}>Choose a PIN</H6Text>
       <H3Text style={styles.text}>Make Sure you can remember it.</H3Text>
       <View style={styles.pinwrap}>
-        <PinSecret pin={store.auth.newPin} stroke={store.theme.color.stroke} />
+        <PinSecret pin={store.auth.newPin} stroke={store.theme.color.stroke} border={store.theme.color.stroke}/>
       </View>
       <PinPad
         onInput={(digit) => auth.pushPinDigit({ digit, param: 'newPin' })}

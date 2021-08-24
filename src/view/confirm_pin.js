@@ -37,6 +37,7 @@ const ConfirmPin = ({ store, auth }) => {
         <PinSecret
           pin={store.auth.pinVerify}
           stroke={store.theme.color.stroke}
+          border={store.theme.color.stroke}
         />
       </View>
       <PinPad

@@ -29,7 +29,7 @@ const LoginPin = ({ store, auth }) => {
     <MainContent style={styles.content}>
       <H6Text style={styles.title}>Enter Your PIN to log in</H6Text>
       <View style={styles.pinwrap}>
-        <PinSecret pin={store.auth.pin} stroke={store.theme.color.stroke} />
+        <PinSecret pin={store.auth.pin} stroke={store.theme.color.stroke} border={store.theme.color.stroke}/>
       </View>
       <View style={styles.pinwrap}>
         <H3Text style={styles.title}>Forgot Pin?</H3Text>
