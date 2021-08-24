@@ -4,7 +4,7 @@ import { H3Text } from './text';
 import PropTypes from 'prop-types';
 import SettingsIcon from '../assets/icon/outline/Gear';
 import CaretLeft from '../assets/icon/filled/CaretLeft';
-import { IconButton } from './button';
+import Button , { IconButton } from './button';
 
 // Header
 const styles = StyleSheet.create({
@@ -38,10 +38,12 @@ export const Setting_Header = ({ color, style }) => (
 
 export const Back_Header = ({ color, style }) => (
   <Header style={[styles.backHeader, style]}>
-    <H3Text style={{ color: color }}>
-      <CaretLeft height={20} width={22} viewBox="0 0 20 20" color={color} />
-      Back
-    </H3Text>
+    <Button>
+      <H3Text style={{ color: color }}>
+        <CaretLeft height={20} width={22} viewBox="0 0 20 20" color={color} />
+        Back
+      </H3Text>
+    </Button>
   </Header>
 );
 
