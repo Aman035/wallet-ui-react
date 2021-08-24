@@ -14,6 +14,7 @@ import Transaction from '../view/transaction';
 import Receive from '../view/receive';
 import BtcCoverNew from '../view/onboarding/btc_cover_new';
 import BtcCoverExisting from '../view/onboarding/btc_cover_existing';
+import ProductIntro from '../view/onboarding/product_intro';
 import { Store } from '../store';
 import Auth from '../action/auth';
 import ThemeAction from '../action/theme';
@@ -47,3 +48,4 @@ storiesOf('Screens', module)
   storiesOf('Screens/Onboarding', module)
   .add('New User', () => <BtcCoverNew store={store} />)
   .add('Existing User', () => <BtcCoverExisting store={store} />)
+  .add('Product Intro' , () => <ProductIntro store = {store} />)
