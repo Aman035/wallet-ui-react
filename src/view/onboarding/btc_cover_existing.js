@@ -8,11 +8,8 @@ import gStyle from '../../components/globalStyleSheet';
 
 const BtcCoverExisting = ({ store }) => {
   const color = store.theme.color;
-  const gstyle = gStyle(color);
-  const cstyle = StyleSheet.create({
-    container: {
-      paddingHorizontal: 20,
-    },
+  const gstyles = gStyle(color);
+  const styles = StyleSheet.create({
     container1: {
       flex: 3,
     },
@@ -44,27 +41,27 @@ const BtcCoverExisting = ({ store }) => {
   });
 
   return (
-    <MainContent style={[gstyle.container, cstyle.container]}>
-      <View style={[gstyle.align, cstyle.container1]}>
+    <MainContent style={gstyles.container}>
+      <View style={[gstyles.align, styles.container1]}>
         <BitcoinCircleLogo
           color={store.theme.primary.bitcoin_orange}
           height={120}
           width={120}
         />
-        <H6Text style={[gstyle.text, cstyle.text]}>Bitcoin Wallet</H6Text>
-        <H3Text style={[gstyle.secText, cstyle.secText]}>Welcome back.</H3Text>
-        <Button2 style={cstyle.btn}>
-          <H3Text style={gstyle.btnText}>Log in</H3Text>
+        <H6Text style={[gstyles.text, styles.text]}>Bitcoin Wallet</H6Text>
+        <H3Text style={[gstyles.secText, styles.secText]}>Welcome back.</H3Text>
+        <Button2 style={styles.btn}>
+          <H3Text style={gstyles.btnText}>Log in</H3Text>
         </Button2>
       </View>
-      <View style={[gstyle.align, cstyle.container2]}>
+      <View style={[gstyles.align, styles.container2]}>
         <Button>
-          <H4Text style={cstyle.restoreTxt}>Reset wallet</H4Text>
+          <H4Text style={styles.restoreTxt}>Reset wallet</H4Text>
         </Button>
-        <H4Text style={[gstyle.secText, cstyle.footerTxt]}>
+        <H4Text style={[gstyles.secText, styles.footerTxt]}>
           Your wallet, your coins
         </H4Text>
-        <H4Text style={[gstyle.secText, cstyle.footerTxt]}>
+        <H4Text style={[gstyles.secText, styles.footerTxt]}>
           100% open-source & open-design
         </H4Text>
       </View>
