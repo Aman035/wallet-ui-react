@@ -4,6 +4,7 @@ const gStyle = (color)=>{
     const style = StyleSheet.create({
         container: {
             backgroundColor: color.fill,
+            padding : 20
           },
           text: {
             color: color.stroke,
