@@ -5,7 +5,7 @@ import Spinner from '../assets/icon/spinner';
 
 storiesOf('Spinner', module)
   .addDecorator((story) => (
-    <MainContent style={{ justifyContent: 'center', padding: 10 }}>
+    <MainContent style={{ justifyContent: 'center',alignItems : 'center', padding: 10 }}>
       {story()}
     </MainContent>
   ))

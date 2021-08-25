@@ -72,12 +72,12 @@ storiesOf('Icons/Mattress', module)
   .add('Icon Light', () => <Container icons={MattressIcon} />)
   .add('Icon Dark', () => <Container icons={MattressIcon} theme="dark" />)
   .add('Logo Light', () => (
-    <MainContent style={{ justifyContent: 'center' }}>
+    <MainContent style={{ justifyContent: 'center' , alignItems : 'center' }}>
       <MatressLogo color="#000" />
     </MainContent>
   ))
   .add('Logo Dark', () => (
-    <MainContent style={{ justifyContent: 'center', backgroundColor: '#000' }}>
+    <MainContent style={{ justifyContent: 'center', alignItems : 'center', backgroundColor: '#000' }}>
       <MatressLogo color="#fff" />
     </MainContent>
   ));
