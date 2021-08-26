@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, StyleSheet} from 'react-native';
+import { View, StyleSheet } from 'react-native';
 import SingleBedIcon from '../assets/icon/myMattress/singleBed';
 import { Setting_Header } from '../components/header';
 import MainContent from '../components/main-content';
@@ -8,104 +8,88 @@ import {
   BalanceLabelNumeral,
   SmallBalanceLabel,
 } from '../components/label';
-import { IconButton } from '../components/button';
+import { Button2 } from '../components/button';
 import ArrowUpIcon from '../assets/icon/filled/ArrowUp';
 import ArrowDownIcon from '../assets/icon/filled/ArrowDown';
 import ArrowRightIcon from '../assets/icon/filled/ArrowRight';
+import CarretUpIcon from '../assets/icon/filled/CaretUp';
 import BitcoinIcon from '../assets/icon/filled/Bitcoin';
 import { H3Text, H4Text } from '../components/text';
-import CarretUpIcon from '../assets/icon/filled/CaretUp';
-import Footer from '../components/footer';
+import gStyle from '../components/globalStyleSheet';
 
 const Simplified_Home2 = ({ store }) => {
-  const fill = store.theme.color.fill;
-  const stroke = store.theme.color.stroke;
-  const secondary = store.theme.color.neutral7;
-
+  const color = store.theme.color;
+  const gstyles = gStyle(color);
   const styles = StyleSheet.create({
-    container: {
-      backgroundColor: fill,
+    container1: {
+      flex: 4,
     },
-    centerContainer: {
-      justifyContent: 'center',
+    container2: {
+      flex: 1,
+      justifyContent: 'flex-end',
+      alignItems: 'center',
     },
     button: {
-      borderColor: secondary,
-      borderRadius: 5,
+      borderColor: color.neutral7,
       borderWidth: 1.5,
-      width: 120,
-      height: 70,
+      width: 130,
+      height: 85,
       marginHorizontal: 8,
     },
     label: {
       paddingVertical: 10,
     },
     smallabel: {
-      color: secondary,
       paddingBottom: 40,
     },
     btnContainer: {
       flexDirection: 'row',
-    },
-    btntext: {
-      color: secondary,
-      paddingTop: 5,
-    },
-    text: {
-      color: stroke,
-    },
-    label: {
-      paddingVertical: 10,
-    },
-    recoveryContainer: {
-      flexDirection: 'row',
-      padding: 30,
+      marginVertical : 15,
+      paddingHorizontal : 10
     },
   });
 
   return (
-    <MainContent style={styles.container}>
-      <Setting_Header color={stroke} />
-      <MainContent style={styles.centerContainer}>
-        <SingleBedIcon height={60} width={60} color={stroke} />
+    <MainContent style={gstyles.container}>
+      <Setting_Header color={color.stroke} />
+      <View style={[gstyles.align, styles.container1]}>
+        <SingleBedIcon height={60} width={60} color={color.stroke} />
         <BalanceLabel style={styles.label}>
           <BalanceLabelNumeral>
-            <H3Text style={styles.text}>
-              <BitcoinIcon color={stroke} height={20} />
+            <H3Text style={gstyles.text}>
+              <BitcoinIcon color={color.stroke} height={20} />
               1.6240 2785
             </H3Text>
           </BalanceLabelNumeral>
         </BalanceLabel>
-        <SmallBalanceLabel style={styles.smallabel}>
+        <SmallBalanceLabel style={[gstyles.secText, styles.smallabel]}>
           $41,328.9
         </SmallBalanceLabel>
         <View style={styles.btnContainer}>
-          <IconButton style={styles.button}>
-            <ArrowUpIcon color={stroke} />
-            <H4Text style={styles.btntext}>Send</H4Text>
-          </IconButton>
-          <IconButton style={styles.button}>
-            <ArrowDownIcon color={stroke} />
-            <H4Text style={styles.btntext}>Receive</H4Text>
-          </IconButton>
+          <Button2 style={styles.button}>
+            <ArrowUpIcon color={color.stroke}/>
+            <H4Text style={gstyles.secText}>Send</H4Text>
+          </Button2>
+          <Button2 style={styles.button}>
+            <ArrowDownIcon color={color.stroke} height={35} />
+            <H4Text style={gstyles.secText}>Receive</H4Text>
+          </Button2>
         </View>
-        <View style={styles.recoveryContainer}>
-          <View style={{ flex: 3 }}>
-            <H3Text style={styles.text}>
-              Set A recovery email and sleep peacefully.{' '}
+        <View style={styles.btnContainer}>
+          <View style={{ flex: 4 }}>
+            <H3Text style={[gstyles.text , {textAlign : 'left'}]}>
+            Set a recovery email and sleep more peacefully.
             </H3Text>
           </View>
-          <ArrowRightIcon color={stroke} />
+          <View style={[gstyles.align, {flex : 1}]}>
+          <ArrowRightIcon color={color.stroke} width={40}/>
+          </View>
         </View>
-      </MainContent>
-      <Footer>
-        <CarretUpIcon color={stroke} />
-        <H3Text style={styles.text}>
-          Receiving
-          <BitcoinIcon color={stroke} height={20} />
-          1.6240 2785
-        </H3Text>
-      </Footer>
+      </View>
+      <View style={styles.container2}>
+        <CarretUpIcon color={color.stroke} height={40} />
+        <H3Text style={gstyles.text}>1 transaction today</H3Text>
+      </View>
     </MainContent>
   );
 };

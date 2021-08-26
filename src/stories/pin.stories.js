@@ -6,7 +6,7 @@ import MainContent from '../components/main-content';
 
 storiesOf('Pin', module)
   .addDecorator((story) => (
-    <MainContent style={{ justifyContent: 'center' }}>{story()}</MainContent>
+    <MainContent style={{ justifyContent: 'center',alignItems : 'center' }}>{story()}</MainContent>
   ))
   .add('Pin Pad', () => (
     <PinPad onInput={action('input digit')} onBackspace={action('backspace')} stroke='#000' secondary='#777777'/>

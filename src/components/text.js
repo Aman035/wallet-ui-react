@@ -10,6 +10,7 @@ const baseStyles = StyleSheet.create({
     fontSize: font.sizeBase,
     lineHeight: font.lineHeightBase,
     zIndex: 1,
+    textAlign : 'center'
   },
 });
 

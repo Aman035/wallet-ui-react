@@ -12,11 +12,15 @@ import Simplified_Home2 from '../view/simplified_home2';
 import Theme_Changer from '../view/theme_changer';
 import Transaction from '../view/transaction';
 import Receive from '../view/receive';
+import BtcCoverNew from '../view/onboarding/btc_cover_new';
+import BtcCoverExisting from '../view/onboarding/btc_cover_existing';
+import ProductIntro from '../view/onboarding/product_intro';
 import { Store } from '../store';
 import Auth from '../action/auth';
 import ThemeAction from '../action/theme';
 import ExchangeAction from '../action/exchange'; 
 import TransactionAction from '../action/transaction';
+
 
 const store = new Store();
 store.init();
@@ -40,3 +44,8 @@ storiesOf('Screens', module)
   .add('Simplified Home2', () => <Simplified_Home2 store={store} />)
   .add('Transaction', () => <Transaction store={store} />)
   .add('Receive', () => <Receive store={store} />);
+
+  storiesOf('Screens/Onboarding', module)
+  .add('New User', () => <BtcCoverNew store={store} />)
+  .add('Existing User', () => <BtcCoverExisting store={store} />)
+  .add('Product Intro' , () => <ProductIntro store = {store} />)

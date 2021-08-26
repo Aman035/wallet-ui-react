@@ -11,6 +11,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'center',
     flexWrap: 'wrap',
+    alignItems : 'center'
   },
   dark : {
     backgroundColor : '#000'

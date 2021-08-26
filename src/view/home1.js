@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet } from 'react-native';
+import { View, StyleSheet } from 'react-native';
 import MainContent from '../components/main-content';
 import { H6Text, H3Text } from '../components/text';
 import { Button2_Small } from '../components/button';
@@ -7,73 +7,55 @@ import RightArrowIcon from '../assets/icon/filled/ArrowRight';
 import { Setting_Header } from '../components/header';
 import { CircularContainer } from '../components/container';
 import CheckIcon from '../assets/icon/filled/Check';
+import gStyle from '../components/globalStyleSheet';
 
 export const Home1 = ({ store }) => {
+  const color = store.theme.color;
+  const gstyles = gStyle(color);
   const styles = StyleSheet.create({
-    contain: {
-      backgroundColor: store.theme.color.fill,
-    },
-    header: {
-      padding: 20,
-      alignSelf: 'flex-end',
-    },
-    container: {
-      justifyContent: 'center',
-      alignItems: 'center',
-      paddingBottom: 20,
-    },
     heading1: {
       marginTop: 40,
-      textAlign: 'center',
-      paddingHorizontal: 90,
-      color: store.theme.color.stroke,
+      paddingHorizontal: 50,
     },
     heading2: {
       marginVertical: 15,
-      textAlign: 'center',
-      paddingHorizontal: 50,
-      color: store.theme.color.neutral7,
+      paddingHorizontal: 30,
     },
     button: {
       backgroundColor: store.theme.primary.bitcoin_blue,
-      width: '50%',
-      marginHorizontal: 'auto',
       marginTop: 25,
-    },
-    btnTxt: {
-      color: store.theme.color.fill,
+      maxWidth: '80%',
+      marginHorizontal: 'auto',
     },
     iconContainer: {
       backgroundColor: store.theme.primary.green,
-      alignItems: 'center',
-      justifyContent: 'center',
     },
   });
 
   return (
-    <MainContent style={styles.contain}>
-      <Setting_Header color={store.theme.color.stroke} />
-      <MainContent style={styles.container}>
-        <CircularContainer style={styles.iconContainer}>
-          <CheckIcon color={store.theme.color.fill} />
+    <MainContent style={gstyles.container}>
+      <Setting_Header color={color.stroke} />
+      <View style={[{ flex: 1 }, gstyles.align]}>
+        <CircularContainer style={[styles.iconContainer, gstyles.align]}>
+          <CheckIcon color={color.fill} />
         </CircularContainer>
-        <H6Text style={styles.heading1}>
+        <H6Text style={[gstyles.text, styles.heading1]}>
           You are all set to receive Bitcoin
         </H6Text>
-        <H3Text style={styles.heading2}>
+        <H3Text style={[gstyles.secText, styles.heading2]}>
           Ask others to send you Bitcoin, or top up the wallet yourself.
         </H3Text>
         <Button2_Small style={styles.button}>
-          <H3Text style={styles.btnTxt}>
-            View address{'  '}
+          <H3Text style={gstyles.btnText}>
+            View address
             <RightArrowIcon
-              color={store.theme.color.fill}
+              color={color.fill}
               height={20}
-              width={20}
+              width={35}
             />
           </H3Text>
         </Button2_Small>
-      </MainContent>
+      </View>
     </MainContent>
   );
 };

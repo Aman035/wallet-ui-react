@@ -35,14 +35,14 @@ const styles2 = StyleSheet.create({
     alignSelf: 'stretch',
     minHeight: 60,
     minWidth: 60,
-    borderRadius: '5px',
+    borderRadius: 5,
   },
   touchable_small: {
     alignItems: 'center',
     alignSelf: 'stretch',
     minHeight: 45,
     minWidth: 40,
-    borderRadius: '5px',
+    borderRadius: 5,
     padding: 10,
   },
 });
