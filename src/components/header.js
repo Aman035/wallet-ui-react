@@ -37,7 +37,7 @@ export const Back_Header = ({ color, style }) => (
   <Header style={[styles.backHeader, style]}>
     <Button>
       <H3Text style={{ color: color }}>
-        <CaretLeft height={20} width={22} viewBox="0 0 20 20" color={color} />
+        <CaretLeft height={20} width={30} viewBox="0 0 20 20" color={color} />
         Back
       </H3Text>
     </Button>

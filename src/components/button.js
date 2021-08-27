@@ -65,7 +65,7 @@ Button2.propTypes = {
 
 export const Button2_Small = ({ onPress, disabled, children, style }) => (
   <TouchableOpacity
-    style={[{ opacity: disabled ? 0.5 : 1 }, styles2.touchable_small, style]}
+    style={[ styles2.touchable_small, style]}
     disabled={disabled}
     onPress={onPress}
   >
