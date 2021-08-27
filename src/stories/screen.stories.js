@@ -15,12 +15,15 @@ import Receive from '../view/receive';
 import BtcCoverNew from '../view/onboarding/btc_cover_new';
 import BtcCoverExisting from '../view/onboarding/btc_cover_existing';
 import ProductIntro from '../view/onboarding/product_intro';
+import Intro from '../view/walletCloudBackup/intro';
+import Password from '../view/walletCloudBackup/password';
+import Backup from '../view/walletCloudBackup/backupService';
+import Confirmation from '../view/walletCloudBackup/confirmation';
 import { Store } from '../store';
 import Auth from '../action/auth';
 import ThemeAction from '../action/theme';
 import ExchangeAction from '../action/exchange'; 
 import TransactionAction from '../action/transaction';
-
 
 const store = new Store();
 store.init();
@@ -49,3 +52,9 @@ storiesOf('Screens', module)
   .add('New User', () => <BtcCoverNew store={store} />)
   .add('Existing User', () => <BtcCoverExisting store={store} />)
   .add('Product Intro' , () => <ProductIntro store = {store} />)
+
+  storiesOf('Screens/Wallet Cloud Backup', module)
+  .add('Intro', () => <Intro store={store} />)
+  .add('Password', () => <Password store={store}/>)
+  .add('Backup', () => <Backup store={store}/>)
+  .add('Confirmation', () => <Confirmation store={store}/>)
