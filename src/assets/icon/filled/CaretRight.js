@@ -12,7 +12,7 @@ function SvgCaretRight(props) {
       {...props}
     >
       <Path
-        d="M14.071 5l-6.364 6.364a1 1 0 000 1.414l6.364 6.364"
+        d="M9.92896 4.85785L16.2929 11.2218C16.6834 11.6123 16.6834 12.2455 16.2929 12.636L9.92896 19"
         stroke={props.color}
         strokeWidth={1.5}
         strokeLinecap="round"
