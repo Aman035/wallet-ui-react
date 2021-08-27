@@ -26,20 +26,19 @@ const Confirmation = ({ store }) => {
 
 	return (
 		<MainContent style={gstyles.container}>
-			<View>
-				<CircularContainer style={[gstyles.align, styles.iconContainer]}>
-					<CheckIcon color={color.fill} height={40} width={40} />
-				</CircularContainer>
-				<H6Text style={[gstyles.text, styles.align, { lineHeight: 40 }]}>
-                    Your wallet is backed up
-				</H6Text>
-				<H3Text style={[gstyles.secText, styles.align, { lineHeight: 30 }]}>
-                    If you lose this device, you can recover your encrypted wallet backup from iCloud.
-				</H3Text>
-				<Button2_Small style={styles.btn}>
-					<H3Text style={gstyles.btnText}>Continue</H3Text>
-				</Button2_Small>
-			</View>
+			<CircularContainer style={[gstyles.align, styles.iconContainer]}>
+				<CheckIcon color={color.fill} height={40} width={40} />
+			</CircularContainer>
+			<H6Text style={[gstyles.text, styles.align, { lineHeight: 40 }]}>
+				Your wallet is backed up
+			</H6Text>
+			<H3Text style={[gstyles.secText, styles.align, { lineHeight: 30 }]}>
+				If you lose this device, you can recover your encrypted wallet backup
+				from iCloud.
+			</H3Text>
+			<Button2_Small style={styles.btn}>
+				<H3Text style={gstyles.btnText}>Continue</H3Text>
+			</Button2_Small>
 		</MainContent>
 	);
 };

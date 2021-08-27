@@ -6,8 +6,7 @@ const styles = StyleSheet.create({
   container: {
     height: '100vh',
     width: '100vw',
-    position : 'absolute',
-    right : 0
+    position : 'absolute'
   },
 });
 

@@ -19,6 +19,9 @@ const Password = ({ store }) => {
 			backgroundColor: store.theme.primary.bitcoin_orange,
 			marginVertical: 30,
 		},
+		disablaBtn : {
+			backgroundColor : color.neutral3,
+			marginVertical : 30		},
 		align: {
 			textAlign: 'left',
 		},
@@ -40,7 +43,7 @@ const Password = ({ store }) => {
 				</H3Text>
                 <PinInput color={color} style={styles.input}/>
                 <PinInput color={color} style={styles.input}/>
-				<Button2_Small style={styles.btn} disabled>
+				<Button2_Small style={styles.disablaBtn} disabled>
 					<H3Text style={gstyles.btnText}>Continue</H3Text>
 				</Button2_Small>
                 <H3Text style={[gstyles.secText, styles.align, { lineHeight: 30 }]}>
