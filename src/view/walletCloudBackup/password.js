@@ -6,8 +6,9 @@ import { Back_Header } from '../../components/header';
 import { PinInput } from '../../components/input';
 import { Button2_Small } from '../../components/button';
 import { H3Text, H6Text } from '../../components/text';
+import { observer } from 'mobx-react';
 
-const Password = ({ store }) => {
+const Password = ({ store, backup }) => {
 	const color = store.theme.color;
 	const gstyles = gStyle(color);
 	const styles = StyleSheet.create({
@@ -19,7 +20,7 @@ const Password = ({ store }) => {
 			backgroundColor: store.theme.primary.bitcoin_orange,
 			marginVertical: 30,
 		},
-		disablaBtn : {
+		disableBtn : {
 			backgroundColor : color.neutral3,
 			marginVertical : 30		},
 		align: {
@@ -30,7 +31,6 @@ const Password = ({ store }) => {
             color : color.stroke
         }
 	});
-
 	return (
 		<MainContent style={[gstyles.container, { padding: 0 }]}>
 			<Back_Header color={color.stroke} />
@@ -41,9 +41,13 @@ const Password = ({ store }) => {
 				<H3Text style={[gstyles.secText, styles.align, { lineHeight: 30 }]}>
                     Please use a password you will remember. It cannot be recovered.
 				</H3Text>
-                <PinInput color={color} style={styles.input}/>
-                <PinInput color={color} style={styles.input}/>
-				<Button2_Small style={styles.disablaBtn} disabled>
+                <PinInput color={color} style={styles.input} 
+					onChange = {(pass)=>backup.changePassword({pass, param : 'newPass'})}
+					value = {store.backup.newPass}/>
+                <PinInput color={color} style={styles.input}
+					onChange = {(pass)=>backup.changePassword({pass , param : 'confirmedPass'})}
+					value = {store.backup.confirmedPass}/>
+				<Button2_Small style={store.backup.valid?styles.btn : styles.disableBtn} disabled={!store.backup.valid}>
 					<H3Text style={gstyles.btnText}>Continue</H3Text>
 				</Button2_Small>
                 <H3Text style={[gstyles.secText, styles.align, { lineHeight: 30 }]}>
@@ -54,4 +58,4 @@ const Password = ({ store }) => {
 	);
 };
 
-export default Password;
+export default observer(Password);

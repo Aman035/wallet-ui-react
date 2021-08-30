@@ -13,7 +13,7 @@ const Confirmation = ({ store }) => {
 	const styles = StyleSheet.create({
 		iconContainer: {
 			backgroundColor: store.theme.primary.green,
-			marginBottom: 20,
+			marginVertical: 20,
 		},
 		btn: {
 			backgroundColor: store.theme.primary.bitcoin_orange,
