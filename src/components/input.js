@@ -36,13 +36,12 @@ const Input = ({ style, placeholder, placeholderTextColor }) => {
   );
 };
 
-export const PinInput = ({ style,color,onPress }) => {
-  const [value, onChangeValue] = React.useState('');
+export const PinInput = ({ style,color,onChange,value }) => {
   return (
       <TextInput
         secureTextEntry
         style={[styles.pinInput, style , {borderColor : color.neutral3}]}
-        onChangeText={() => {onChangeValue();onPress(value)}}
+        onChangeText={(ev)=>onChange(ev)}
         value={value}
       />
   );
