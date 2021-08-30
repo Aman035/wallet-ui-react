@@ -18,6 +18,11 @@ export class Store {
         resetPinNew: '',
         resetPinVerify: '',
       },
+      backup : {
+        newPass : '',
+        confirmedPass : '',
+        valid : false
+      },
       theme: {
         type: 'dark',
         primary: primary,
