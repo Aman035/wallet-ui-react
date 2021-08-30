@@ -24,6 +24,7 @@ import Auth from '../action/auth';
 import ThemeAction from '../action/theme';
 import ExchangeAction from '../action/exchange'; 
 import TransactionAction from '../action/transaction';
+import BackupAction from '../action/backup';
 
 const store = new Store();
 store.init();
@@ -33,6 +34,7 @@ const exchange = new ExchangeAction(store);
 exchange.init();
 const transactions = new TransactionAction(store);
 transactions.init();
+const backup = new BackupAction(store);
 
 storiesOf('Screens', module)
   .add('Theme Changer', () => <Theme_Changer store = {store} theme = {theme} />)
@@ -55,6 +57,6 @@ storiesOf('Screens', module)
 
   storiesOf('Screens/Wallet Cloud Backup', module)
   .add('Intro', () => <Intro store={store} />)
-  .add('Password', () => <Password store={store}/>)
+  .add('Password', () => <Password store={store} backup={backup}/>)
   .add('Backup', () => <Backup store={store}/>)
   .add('Confirmation', () => <Confirmation store={store}/>)
