@@ -8,35 +8,41 @@ import { extendObservable } from 'mobx';
 import { primary, dark } from './components/themeColor';
 
 export class Store {
-  constructor() {
-    extendObservable(this, {
-      auth: {
-        pin: '',
-        newPin: '',
-        pinVerify: '',
-        resetPinCurrent: '',
-        resetPinNew: '',
-        resetPinVerify: '',
-      },
-      backup : {
-        newPass : '',
-        confirmedPass : '',
-        valid : false
-      },
-      theme: {
-        type: 'dark',
-        primary: primary,
-        color: dark,
-      },
-      transactions : [],
-      exchangeRate : {},
-      defaultUnit  : 'btc',
-      defaultFiat : 'eur',
-    });
-  }
-
-  init() {
-  }
+	constructor() {
+		extendObservable(this, {
+			auth: {
+				pin: '',
+				newPin: '',
+				pinVerify: '',
+				resetPinCurrent: '',
+				resetPinNew: '',
+				resetPinVerify: '',
+			},
+			backup: {
+				newPass: '',
+				confirmedPass: '',
+				valid: false,
+			},
+			theme: {
+				type: 'dark',
+				primary: primary,
+				color: dark,
+			},
+      hardwareWallet: {
+				type: 'none',
+        identifying : false,
+				identified : false,
+        verifying : false,
+				addressVerified : false,
+				resgistered : false,
+			},
+			transactions: [],
+			exchangeRate: {},
+			defaultUnit: 'btc',
+			defaultFiat: 'eur',
+		});
+	}
+	init() {}
 }
 
 export default new Store();
