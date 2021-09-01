@@ -7,7 +7,7 @@ import ListItem from '../../components/listItem';
 import { IconButton } from '../../components/button';
 import SettingsIcon from '../../assets/icon/filled/Gear';
 
-const ImportSettings = ({ store }) => {
+const ImportSettings = ({ store, hardwareWallet }) => {
 	const color = store.theme.color;
 	const gstyles = gStyle(color);
 	const styles = StyleSheet.create({
@@ -33,21 +33,33 @@ const ImportSettings = ({ store }) => {
 			<H6Text style={[gstyles.text, styles.align, { lineHeight: 40 }]}>
 				Which hardware wallet do you want to connect to?
 			</H6Text>
-			<ListItem color={color} style={styles.list}>
+			<ListItem
+				color={color}
+				style={styles.list}
+				onPress={() =>
+					hardwareWallet.registerWallet({ param: 'type', wallet: 'ledger' })
+				}
+			>
 				<View style={{ flexDirection: 'row' }}>
-					<view style={{ flex: 1 }}>
+					<View style={{ flex: 1 }}>
 						<SettingsIcon color={color.stroke} width={35} />
-					</view>
+					</View>
 					<View style={{ flex: 3 }}>
 						<H3Text style={gstyles.text}>Ledger</H3Text>
 					</View>
 				</View>
 			</ListItem>
-			<ListItem color={color} style={gstyles.align}>
+			<ListItem
+				color={color}
+				style={gstyles.align}
+				onPress={() =>
+					hardwareWallet.registerWallet({ param: 'type', wallet: 'trezor' })
+				}
+			>
 				<View style={{ flexDirection: 'row' }}>
-					<view style={{ flex: 1 }}>
+					<View style={{ flex: 1 }}>
 						<SettingsIcon color={color.stroke} width={35} />
-					</view>
+					</View>
 					<View style={{ flex: 3 }}>
 						<H3Text style={gstyles.text}>Trezor</H3Text>
 					</View>

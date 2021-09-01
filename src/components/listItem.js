@@ -18,13 +18,13 @@ const styles = StyleSheet.create({
         alignItems : 'flex-end'
     }
 });
-const ListItem = ({children , style, color})=>(
+const ListItem = ({children , style, color, onPress})=>(
     <View style = {[styles.flexContainer , style]}>
         <View style = {styles.container1}>
             {children}
         </View>
         <View style = {styles.container2}>
-            <IconButton>
+            <IconButton onPress={()=>onPress()}>
                 <CaretRight color={color.stroke}/>
             </IconButton>
         </View>
