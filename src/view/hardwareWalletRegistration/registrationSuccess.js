@@ -36,7 +36,7 @@ const Confirmation = ({ store }) => {
 				You can now use it to sign transactions and set up multisignature
 				wallets.
 			</H3Text>
-			<Button2_Small style={styles.btn}>
+			<Button2_Small style={styles.btn} onPress={()=>{}}>
 				<H3Text style={gstyles.btnText}>Continue</H3Text>
 			</Button2_Small>
 		</MainContent>
