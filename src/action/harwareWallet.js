@@ -1,6 +1,6 @@
 /**
  * @fileOverview action to handle registration of hardware Wallet
- * Currently it contains boilerplate code only
+ * Currently This File Contains boilerplate code only
  */
 
 class HardwareWalletAction {

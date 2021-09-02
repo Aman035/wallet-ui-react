@@ -1,5 +1,6 @@
 /**
  * @fileOverview actions to set transactions state within the app
+ * Currently This File Contains boilerplate code only
  */
 
 import {exchange , toDate , TransacionCategory} from '../helper';
