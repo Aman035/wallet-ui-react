@@ -19,12 +19,17 @@ import Intro from '../view/walletCloudBackup/intro';
 import Password from '../view/walletCloudBackup/password';
 import Backup from '../view/walletCloudBackup/backupService';
 import Confirmation from '../view/walletCloudBackup/confirmation';
+import ImportSettings from '../view/hardwareWalletRegistration/importSettings';
+import Identification from '../view/hardwareWalletRegistration/identification';
+import AddressVerification from '../view/hardwareWalletRegistration/addressVerification';
+import RegistrationSuccess from '../view/hardwareWalletRegistration/registrationSuccess';
 import { Store } from '../store';
 import Auth from '../action/auth';
 import ThemeAction from '../action/theme';
 import ExchangeAction from '../action/exchange'; 
 import TransactionAction from '../action/transaction';
 import BackupAction from '../action/backup';
+import HardwareWalletAction from '../action/harwareWallet';
 
 const store = new Store();
 store.init();
@@ -35,6 +40,7 @@ exchange.init();
 const transactions = new TransactionAction(store);
 transactions.init();
 const backup = new BackupAction(store);
+const hardwareWallet = new HardwareWalletAction(store);
 
 storiesOf('Screens', module)
   .add('Theme Changer', () => <Theme_Changer store = {store} theme = {theme} />)
@@ -60,3 +66,9 @@ storiesOf('Screens', module)
   .add('Password', () => <Password store={store} backup={backup}/>)
   .add('Backup', () => <Backup store={store}/>)
   .add('Confirmation', () => <Confirmation store={store}/>)
+
+  storiesOf('Screens/Harware Wallet Registration', module)
+  .add('Import Settings', () => <ImportSettings store={store} hardwareWallet = {hardwareWallet}/>)
+  .add('Wallet Identification', () => <Identification store={store} backup={backup}/>)
+  .add('Address Verification', () => <AddressVerification store={store}/>)
+  .add('Registration Success', () => <RegistrationSuccess store={store}/>)
