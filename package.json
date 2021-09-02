@@ -1,7 +1,7 @@
 {
   "homepage": "http://aman035.github.io/wallet-ui-react",
   "name": "wallet-ui-react",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "scripts": {
     "storybook": "start-storybook",
     "predeploy": "npm run build-storybook",
