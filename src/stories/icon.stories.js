@@ -7,6 +7,7 @@ import * as AllOutlined from '../assets/icon/outline';
 import * as Hardware from '../assets/icon/myMattress/hardware_illustrations';
 import * as MattIcon from '../assets/icon/myMattress';
 import MatressLogo from '../assets/icon/myMattress/Logo';
+import { H4Text } from '../components/text';
 
 const Filled = Object.values(AllFilled);
 const Outline = Object.values(AllOutlined);
@@ -21,8 +22,8 @@ const styles = StyleSheet.create({
     flexWrap: 'wrap',
   },
   icon: {
-    height: 100,
-    width: 100,
+    height: 120,
+    width: 120,
     alignItems: 'center',
     justifyContent: 'center',
   },
@@ -34,8 +35,8 @@ const styles = StyleSheet.create({
 const Container = ({
   icons,
   theme = 'light',
-  height = '40',
-  width = '40',
+  height = '50',
+  width = '50',
   fill = 'none',
 }) => (
   <MainContent
@@ -49,6 +50,7 @@ const Container = ({
           color={theme === 'light' ? '#000' : '#fff'}
           fill={fill}
         />
+        <H4Text style={{color : theme === 'light' ? '#000' : '#fff' , margin : 10}}>{Each.name.substr(3)}</H4Text>
       </View>
     ))}
   </MainContent>

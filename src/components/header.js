@@ -4,7 +4,7 @@ import { H3Text } from './text';
 import PropTypes from 'prop-types';
 import SettingsIcon from '../assets/icon/outline/Gear';
 import CaretLeft from '../assets/icon/filled/CaretLeft';
-import Button , { IconButton } from './button';
+import Button from './button';
 
 // Header
 const styles = StyleSheet.create({
@@ -27,9 +27,9 @@ Header.propTypes = {
 
 export const Setting_Header = ({ color, style }) => (
   <Header style={[styles.settingHeader, style]}>
-      <IconButton>
+      <Button>
         <SettingsIcon height={30} width={30} color={color} />
-      </IconButton>
+      </Button>
   </Header>
 );
 

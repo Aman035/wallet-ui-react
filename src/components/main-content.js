@@ -4,8 +4,7 @@ import PropTypes from "prop-types";
 
 const styles = StyleSheet.create({
   content: {
-    flexGrow: 1,
-    // alignItems : 'center'
+    flexGrow: 1
   }
 });
 

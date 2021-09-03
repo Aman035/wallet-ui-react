@@ -5,7 +5,6 @@ import { Button2, Button2_Small, IconButton } from '../components/button';
 import { primary } from '../components/themeColor';
 import Button from '../components/button';
 import MainContent from '../components/main-content';
-import SettingIcon from '../assets/icon/outline/Gear';
 
 storiesOf('Button', module)
   .addDecorator((story) => (
@@ -36,6 +35,12 @@ storiesOf('Button', module)
       style={{ backgroundColor: primary.bitcoin_orange }}
     />
   ))
+  .add('Btn1 Small', () => (
+    <Button2_Small
+      onPress={action('clicked')}
+      style={{ backgroundColor: primary.bitcoin_orange }}
+    />
+  ))
   .add('Btn2', () => (
     <Button2
       onPress={action('clicked')}
@@ -54,9 +59,4 @@ storiesOf('Button', module)
       onPress={action('clicked')}
       style={{ backgroundColor: primary.bitcoin_blue }}
     />
-  ))
-  .add('Icon Button', () => (
-    <IconButton onPress={action('clicked')}>
-      <SettingIcon height={25} width={25} color="#000" />
-    </IconButton>
   ));
