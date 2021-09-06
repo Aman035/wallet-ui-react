@@ -1,5 +1,5 @@
-import React from 'react';
-import { View, StyleSheet } from 'react-native';
+import React , {useState} from 'react';
+import { View, StyleSheet,Switch } from 'react-native';
 import { observer } from 'mobx-react';
 import MainContent from '../components/main-content';
 import { H3Text, H5Text } from '../components/text';
@@ -20,9 +20,24 @@ const ThemeChanger = ({ store, theme }) => {
     },
   });
 
+  const [isEnabled, setIsEnabled] = useState(true);
+  const toggleSwitch = () => {
+    if(isEnabled === false)
+    theme.darkTheme();
+    else
+    theme.lightTheme();
+    setIsEnabled(previousState => !previousState);
+  }
+
   return (
-    <MainContent style={gstyles.container}>
-      <View style={[gstyles.align, styles.container]}>
+    <MainContent style={[gstyles.container , gstyles.align]}>
+      <Switch
+        thumbColor={color.stroke}
+        onValueChange={toggleSwitch}
+        style={{ transform: [{ scaleX: 1.8 }, { scaleY:1.8 }] }}
+        value={isEnabled}
+      />
+      {/* <View style={[gstyles.align, styles.container]}>
         <H5Text style={gstyles.text}>Theme Changer</H5Text>
       </View>
       <View style={[gstyles.align, styles.container]}>
@@ -34,12 +49,12 @@ const ThemeChanger = ({ store, theme }) => {
         <Button2 style={styles.btn} onPress={() => theme.darkTheme()}>
           <H3Text style={gstyles.text}>Dark</H3Text>
         </Button2>
-      </View>
-      <View style={[gstyles.align, styles.container]}>
+      </View> */}
+      {/* <View style={[gstyles.align, styles.container]}>
         <Button2 disabled style={styles.btn} onPress={() => theme.userTheme()}>
           <H3Text style={gstyles.text}>User Defined (Coming Soon)</H3Text>
         </Button2>
-      </View>
+      </View> */}
     </MainContent>
   );
 };
