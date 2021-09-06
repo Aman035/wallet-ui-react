@@ -1,7 +1,7 @@
 import React from "react";
 import Svg, { Path, Rect } from "react-native-svg";
 
-function SingleBedIcon(props) {
+function SvgSingleBed(props) {
   return (
     <Svg width="50" height="50" fill="none" viewBox="0 0 50 50" {...props}>
       <Rect
@@ -20,4 +20,4 @@ function SingleBedIcon(props) {
   );
 }
 
-export default SingleBedIcon;
+export default SvgSingleBed;
