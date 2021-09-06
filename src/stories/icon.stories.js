@@ -7,6 +7,7 @@ import * as AllOutlined from '../assets/icon/outline';
 import * as Hardware from '../assets/icon/myMattress/hardware_illustrations';
 import * as MattIcon from '../assets/icon/myMattress';
 import MatressLogo from '../assets/icon/myMattress/Logo';
+import Qr from '../assets/img/qr';
 import { H4Text } from '../components/text';
 
 const Filled = Object.values(AllFilled);
@@ -81,5 +82,10 @@ storiesOf('Icons/Mattress', module)
   .add('Logo Dark', () => (
     <MainContent style={{ justifyContent: 'center', alignItems : 'center', backgroundColor: '#000' }}>
       <MatressLogo color="#fff" />
+    </MainContent>
+  ))
+  .add('Qr', () => (
+    <MainContent style={{ justifyContent: 'center', alignItems : 'center'}}>
+      <Qr/>
     </MainContent>
   ));
