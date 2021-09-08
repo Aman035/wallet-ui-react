@@ -45,7 +45,7 @@ const ThemeChanger = ({ store, theme }) => {
 		},
     pickerStyle : {
         flex : 1,
-        minWidth : 200,
+        minWidth : 150,
         paddingHorizontal : 10,
         paddingBottom : 20
     }
@@ -54,7 +54,7 @@ const ThemeChanger = ({ store, theme }) => {
 	const [isEnabled, setIsEnabled] = useState(store.theme.type === 'dark');
 	const [isDisabled, setIsDisabled] = useState(store.theme.type === 'user');
 	const [showCustom, setCustom] = useState(false);
-
+  const colors = Object.entries(store.theme.userColor);
 	const toggleSwitch = () => {
 		if (isEnabled === false) theme.darkTheme();
 		else theme.lightTheme();
@@ -88,89 +88,23 @@ const ThemeChanger = ({ store, theme }) => {
 			{showCustom ? (
         <View>
 					<FlexContainer style={{ flexWrap : 'wrap' , alignItems : 'center' , alignSelf : 'center' }}>
-						<View style={styles.pickerStyle}>
-              <View style={{width : 150 , alignSelf : 'center'}}>
-							  <ColorPicker />
+            {colors.map( (Each,i)=>{
+              return(
+              <View style={styles.pickerStyle} key = {i}>
+                <View style={{width : 130 , alignSelf : 'center'}}>
+                  <ColorPicker 
+                    color={Each[1]} 
+                    changeColor={(color)=> theme.changeUserColors({param : Each[0] , color})}
+                  />
+                </View>
+                <H3Text style={[gstyles.text, { paddingVertical: 10 }]}>
+                  {Each[0]}
+                </H3Text>
               </View>
-							<H3Text style={[gstyles.text, { paddingVertical: 10 }]}>
-								Fill
-							</H3Text>
-						</View>
-            <View style={styles.pickerStyle}>
-              <View style={{width : 150 , alignSelf : 'center'}}>
-							  <ColorPicker />
-              </View>
-							<H3Text style={[gstyles.text, { paddingVertical: 10 }]}>
-								Neutral1
-							</H3Text>
-						</View>
-            <View style={styles.pickerStyle}>
-              <View style={{width : 150 , alignSelf : 'center'}}>
-							  <ColorPicker />
-              </View>
-							<H3Text style={[gstyles.text, { paddingVertical: 10 }]}>
-								Neutral2
-							</H3Text>
-						</View>
-            <View style={styles.pickerStyle}>
-              <View style={{width : 150 , alignSelf : 'center'}}>
-							  <ColorPicker />
-              </View>
-							<H3Text style={[gstyles.text, { paddingVertical: 10 }]}>
-								Neutral3
-							</H3Text>
-						</View>
-            <View style={styles.pickerStyle}>
-              <View style={{width : 150 , alignSelf : 'center'}}>
-							  <ColorPicker />
-              </View>
-							<H3Text style={[gstyles.text, { paddingVertical: 10 }]}>
-								Neutral4
-							</H3Text>
-						</View>
-            <View style={styles.pickerStyle}>
-              <View style={{width : 150 , alignSelf : 'center'}}>
-							  <ColorPicker />
-              </View>
-							<H3Text style={[gstyles.text, { paddingVertical: 10 }]}>
-								Neutral5
-							</H3Text>
-						</View>
-            <View style={styles.pickerStyle}>
-              <View style={{width : 150 , alignSelf : 'center'}}>
-							  <ColorPicker />
-              </View>
-							<H3Text style={[gstyles.text, { paddingVertical: 10 }]}>
-								Neutral6
-							</H3Text>
-						</View>
-            <View style={styles.pickerStyle}>
-              <View style={{width : 150 , alignSelf : 'center'}}>
-							  <ColorPicker />
-              </View>
-							<H3Text style={[gstyles.text, { paddingVertical: 10 }]}>
-								Neutral7
-							</H3Text>
-						</View>
-            <View style={styles.pickerStyle}>
-              <View style={{width : 150 , alignSelf : 'center'}}>
-							  <ColorPicker />
-              </View>
-							<H3Text style={[gstyles.text, { paddingVertical: 10 }]}>
-								Neutral8
-							</H3Text>
-						</View>
-            <View style={styles.pickerStyle}>
-              <View style={{width : 150 , alignSelf : 'center'}}>
-							  <ColorPicker />
-              </View>
-							<H3Text style={[gstyles.text, { paddingVertical: 10 }]}>
-								Stroke
-							</H3Text>
-						</View>
+            )})}
 					</FlexContainer>
 
-          <Button2_Small style={[styles.btn , styles.btnSmall]}>
+          <Button2_Small style={[styles.btn , styles.btnSmall]} onPress={()=>theme.userTheme()}>
             <H3Text style={gstyles.btnText}>Apply Changes</H3Text>
           </Button2_Small>
           </View>

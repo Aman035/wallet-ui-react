@@ -40,17 +40,3 @@ export const dark = {
     neutral8 : '#CCCCCC' , 
     stroke : '#FFFFFF'
 }
-
-//User Defined Colors - initialy same as light 
-export const user = {
-    fill : '#FFFFFF',
-    neutral1 : '#F8F8F8' ,
-    neutral2 : '#F4F4F4' ,
-    neutral3 : '#EDEDED' ,
-    neutral4 : '#DEDEDE' ,
-    neutral5 : '#BBBBBB' ,
-    neutral6 : '#999999' ,
-    neutral7 : '#777777' , 
-    neutral8 : '#404040' , 
-    stroke : '#000000'
-}
