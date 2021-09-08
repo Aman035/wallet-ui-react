@@ -5,7 +5,7 @@
  */
 
 import { extendObservable } from 'mobx';
-import { primary, dark } from './components/themeColor';
+import { primary, dark, light } from './components/themeColor';
 
 export class Store {
 	constructor() {
@@ -27,6 +27,7 @@ export class Store {
 				type: 'dark',
 				primary: primary,
 				color: dark,
+				userColor : light
 			},
 			hardwareWallet: {
 				type: 'none',

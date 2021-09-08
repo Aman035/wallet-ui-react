@@ -1,7 +1,7 @@
 /**
  * @fileOverview action to handle the overall theme of components
  */
- import {light , dark, user} from '../components/themeColor';
+ import {light , dark} from '../components/themeColor';
 
  class ThemeAction {
    constructor(store) {
@@ -34,7 +34,7 @@
     */
   userTheme() {
     this._store.theme.type = 'user';
-    this._store.theme.color = user;
+    this._store.theme.color = this._store.theme.userColor;
   }
 
   /**
@@ -44,7 +44,7 @@
     * @return {undefined}
     */
    changeUserColors({param , color}) {
-    user[param] = color;
+    this._store.theme.userColor[param] = color;
   }
 }
  export default ThemeAction;
