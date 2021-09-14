@@ -20,9 +20,11 @@ const ThemeChanger = ({ store, theme }) => {
 		container: {
 			flex: 1,
 		},
-    colorContainer : {
-
-    },
+		colorContainer: {
+			flexWrap: 'wrap',
+			alignItems: 'center',
+			alignSelf: 'center',
+		},
 		startAlign: {
 			alignItems: 'flex-start',
 		},
@@ -36,29 +38,33 @@ const ThemeChanger = ({ store, theme }) => {
 			backgroundColor: store.theme.primary.bitcoin_orange,
 			marginVertical: 30,
 		},
-    btnSmall : {
-      alignSelf : 'center',
-      width : 150
-    },
+		btnSmall: {
+			alignSelf: 'center',
+			width: 150,
+		},
 		switch: {
 			transform: [{ scaleX: 1.8 }, { scaleY: 1.8 }],
 		},
-    pickerStyle : {
-        flex : 1,
-        minWidth : 150,
-        paddingHorizontal : 10,
-        paddingBottom : 20
-    }
+		pickerStyle: {
+			flex: 1,
+			minWidth: 150,
+			paddingHorizontal: 10,
+			paddingBottom: 20,
+		},
 	});
 
-	const [isEnabled, setIsEnabled] = useState(store.theme.type === 'dark');
-	const [isDisabled, setIsDisabled] = useState(store.theme.type === 'user');
-	const [showCustom, setCustom] = useState(false);
-  const colors = Object.entries(store.theme.userColor);
+	const colors = Object.entries(store.theme.userColor);
+
 	const toggleSwitch = () => {
-		if (isEnabled === false) theme.darkTheme();
-		else theme.lightTheme();
-		setIsEnabled((previousState) => !previousState);
+		if (store.theme.type === 'light') theme.darkTheme();
+		else {
+			if (store.theme.type === 'dark') theme.lightTheme();
+		}
+	};
+
+	const handleCustomTheme = () => {
+		if (store.theme.type === 'user') theme.darkTheme();
+		else theme.userTheme();
 	};
 
 	return (
@@ -70,10 +76,10 @@ const ThemeChanger = ({ store, theme }) => {
 				<View style={[styles.container, styles.centerAlign]}>
 					<Switch
 						thumbColor={color.fill}
-						disabled={isDisabled}
+						disabled={store.theme.type === 'user'}
 						onValueChange={toggleSwitch}
 						style={styles.switch}
-						value={isEnabled}
+						value={store.theme.type === 'dark'}
 					/>
 				</View>
 				<View style={[styles.container, styles.startAlign]}>
@@ -81,33 +87,38 @@ const ThemeChanger = ({ store, theme }) => {
 				</View>
 			</FlexContainer>
 
-			<Button2 style={styles.btn} onPress={() => setCustom(!showCustom)}>
-				<H3Text style={gstyles.btnText}>Choose A Custom Theme</H3Text>
+			<Button2 style={styles.btn} onPress={() => handleCustomTheme()}>
+				{store.theme.type === 'user' ? (
+					<H3Text style={gstyles.btnText}>Remove Custom Theme</H3Text>
+				) : (
+					<H3Text style={gstyles.btnText}>Use a Custom Theme</H3Text>
+				)}
 			</Button2>
 
-			{showCustom ? (
-        <View>
-					<FlexContainer style={{ flexWrap : 'wrap' , alignItems : 'center' , alignSelf : 'center' }}>
-            {colors.map( (Each,i)=>{
-              return(
-              <View style={styles.pickerStyle} key = {i}>
-                <View style={{width : 130 , alignSelf : 'center'}}>
-                  <ColorPicker 
-                    color={Each[1]} 
-                    changeColor={(color)=> theme.changeUserColors({param : Each[0] , color})}
-                  />
-                </View>
-                <H3Text style={[gstyles.text, { paddingVertical: 10 }]}>
-                  {Each[0]}
-                </H3Text>
-              </View>
-            )})}
+			{store.theme.type === 'user' ? (
+				<View>
+					<FlexContainer
+						style={styles.colorContainer}
+					>
+						{colors.map((Each, i) => {
+							return (
+								<View style={styles.pickerStyle} key={i}>
+									<View style={{ width: 130, alignSelf: 'center' }}>
+										<ColorPicker
+											color={Each[1]}
+											changeColor={(color) =>
+												theme.changeUserColors({ param: Each[0], color })
+											}
+										/>
+									</View>
+									<H3Text style={[gstyles.text, { paddingVertical: 10 }]}>
+										{Each[0]}
+									</H3Text>
+								</View>
+							);
+						})}
 					</FlexContainer>
-
-          <Button2_Small style={[styles.btn , styles.btnSmall]} onPress={()=>theme.userTheme()}>
-            <H3Text style={gstyles.btnText}>Apply Changes</H3Text>
-          </Button2_Small>
-          </View>
+				</View>
 			) : null}
 		</MainContent>
 	);
