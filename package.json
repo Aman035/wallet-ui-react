@@ -17,6 +17,7 @@
     "mobx": "^6.3.2",
     "mobx-react": "^7.2.0",
     "react": "^16.13.1",
+    "react-color": "^2.19.3",
     "react-native": "^0.63.2",
     "react-native-web": "^0.11.2",
     "svgs": "^4.1.1"

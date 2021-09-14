@@ -11,10 +11,12 @@ storiesOf('Fonts', module)
     </MainContent>
   ))
   .add('PaytoneOne Reglar', () => renderFont('PaytoneOne Regular'))
+  .add('Inter Thin', () => renderFont('Inter Thin'))
   .add('Inter Regular', () => renderFont('Inter Regular'))
+  .add('Inter Medium', () => renderFont('Inter Medium'))
   .add('Inter SemiBold', () => renderFont('Inter SemiBold'))
-  .add('Inter Medium', () => renderFont('Inter Medium'));
-
+  .add('Inter Bold', () => renderFont('Inter Bold'))
+ 
 const renderFont = (fontFamily) => (
   <Text
     style={{ fontFamily, fontSize: 28, lineHeight: 30, textAlign: 'center' }}

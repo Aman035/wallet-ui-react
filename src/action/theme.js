@@ -34,7 +34,17 @@
     */
   userTheme() {
     this._store.theme.type = 'user';
-    this._store.theme.color = user;
+    this._store.theme.color = this._store.theme.userColor;
+  }
+
+  /**
+    * Changes the color of user theme
+    * @param  {string} options.colorName, The type of field of which color is changed
+    * @param  {string} options.color, The new color of the param
+    * @return {undefined}
+    */
+   changeUserColors({param , color}) {
+    this._store.theme.userColor[param] = color;
   }
 }
  export default ThemeAction;

@@ -1,7 +1,7 @@
 import React from "react";
 import Svg, { Path, Rect } from "react-native-svg";
 
-function TripleBedIcon(props) {
+function SvgTripleBed(props) {
   return (
     <Svg width="50" height="50" fill="none" viewBox="0 0 50 50" {...props}>
       <Rect
@@ -24,4 +24,4 @@ function TripleBedIcon(props) {
   );
 }
 
-export default TripleBedIcon;
+export default SvgTripleBed;

@@ -43,7 +43,26 @@ const backup = new BackupAction(store);
 const hardwareWallet = new HardwareWalletAction(store);
 
 storiesOf('Screens', module)
-  .add('Theme Changer', () => <Theme_Changer store = {store} theme = {theme} />)
+.add('Theme Changer', () => <Theme_Changer store = {store} theme = {theme} />)
+
+storiesOf('Screens/Onboarding', module)
+.add('New User', () => <BtcCoverNew store={store} />)
+.add('Existing User', () => <BtcCoverExisting store={store} />)
+.add('Product Intro' , () => <ProductIntro store = {store} />)
+
+storiesOf('Screens/Wallet Cloud Backup', module)
+.add('Intro', () => <Intro store={store} />)
+.add('Password', () => <Password store={store} backup={backup}/>)
+.add('Backup', () => <Backup store={store}/>)
+.add('Confirmation', () => <Confirmation store={store}/>)
+
+storiesOf('Screens/Harware Wallet Registration', module)
+.add('Import Settings', () => <ImportSettings store={store} hardwareWallet = {hardwareWallet}/>)
+.add('Wallet Identification', () => <Identification store={store} backup={backup}/>)
+.add('Address Verification', () => <AddressVerification store={store}/>)
+.add('Registration Success', () => <RegistrationSuccess store={store}/>)
+
+storiesOf('Screens/MyMattress', module)
   .add('Cover', () => <Cover store={store} />)
   .add('Choose Pin', () => <ChoosePin store={store} auth={auth} />)
   .add('Confirm Pin', () => <ConfirmPin store={store} auth={auth} />)
@@ -55,20 +74,3 @@ storiesOf('Screens', module)
   .add('Simplified Home2', () => <Simplified_Home2 store={store} />)
   .add('Transaction', () => <Transaction store={store} />)
   .add('Receive', () => <Receive store={store} />);
-
-  storiesOf('Screens/Onboarding', module)
-  .add('New User', () => <BtcCoverNew store={store} />)
-  .add('Existing User', () => <BtcCoverExisting store={store} />)
-  .add('Product Intro' , () => <ProductIntro store = {store} />)
-
-  storiesOf('Screens/Wallet Cloud Backup', module)
-  .add('Intro', () => <Intro store={store} />)
-  .add('Password', () => <Password store={store} backup={backup}/>)
-  .add('Backup', () => <Backup store={store}/>)
-  .add('Confirmation', () => <Confirmation store={store}/>)
-
-  storiesOf('Screens/Harware Wallet Registration', module)
-  .add('Import Settings', () => <ImportSettings store={store} hardwareWallet = {hardwareWallet}/>)
-  .add('Wallet Identification', () => <Identification store={store} backup={backup}/>)
-  .add('Address Verification', () => <AddressVerification store={store}/>)
-  .add('Registration Success', () => <RegistrationSuccess store={store}/>)
